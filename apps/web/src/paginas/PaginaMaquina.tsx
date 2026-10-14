@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Navigate, useLocation, useNavigate, useParams, useSearchParams } from "react-router";
+import type { EstadoAbrirChamado } from "../api/abrirChamado";
 import { filaEventos } from "../api/filaEventos";
 import { lerJornadaId } from "../api/jornada";
 import { carregarMaquina, modeloNaoReconhecido, type DadosMaquina, type ProblemaCatalogado } from "../api/maquina";
@@ -26,26 +27,6 @@ function FotoModelo({ foto }: { foto?: string }) {
   return <img className="maquina__foto" src={foto} alt="" onError={() => setFalhou(true)} />;
 }
 
-/**
- * Painel do Assistente_IA na mesma página (design.md, rota `/m/:modeloId`).
- * O conteúdo real chega com a tarefa do Assistente (19); aqui só abrimos o
- * painel mantendo a Jornada atual (Req 3.2).
- */
-function PainelAssistente() {
-  const titulo = useRef<HTMLHeadingElement>(null);
-  useEffect(() => {
-    titulo.current?.focus();
-  }, []);
-  return (
-    <section id="assistente" className="maquina__assistente" aria-labelledby="assistente-titulo">
-      <h2 id="assistente-titulo" ref={titulo} tabIndex={-1}>
-        Fale com o assistente
-      </h2>
-      <p>O assistente estará disponível em breve. Por enquanto, escolha um dos problemas da lista.</p>
-    </section>
-  );
-}
-
 interface PropsMaquina {
   modeloId: string;
   numeroSerie?: string;
@@ -59,7 +40,6 @@ function Maquina({ modeloId, numeroSerie, direto }: PropsMaquina) {
   const [estado, setEstado] = useState<Estado>({ tipo: "carregando" });
   const [abrindo, setAbrindo] = useState(false);
   const [falhaSelecao, setFalhaSelecao] = useState(false);
-  const [assistenteAberto, setAssistenteAberto] = useState(false);
   const jornada = useRef<Promise<string> | null>(null);
 
   /**
@@ -189,13 +169,13 @@ function Maquina({ modeloId, numeroSerie, direto }: PropsMaquina) {
       <button
         type="button"
         className="botao botao--secundario maquina__outro"
-        aria-expanded={assistenteAberto}
-        aria-controls={assistenteAberto ? "assistente" : undefined}
-        onClick={() => setAssistenteAberto(true)}
+        onClick={() => {
+          const estado: EstadoAbrirChamado = { categoria: "outro", contexto: `Problema não listado - modelo ${modelo.nome} (${modeloId})` };
+          void navegar("/abrir-chamado", { state: estado });
+        }}
       >
         {TEXTO_OUTRO_PROBLEMA}
       </button>
-      {assistenteAberto ? <PainelAssistente /> : null}
     </section>
   );
 }

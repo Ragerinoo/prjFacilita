@@ -21,6 +21,7 @@ export const rotas: RouteObject[] = [
           { index: true, lazy: () => import("../paginas/Inicio") },
           { path: "m/:modeloId", lazy: () => import("../paginas/PaginaMaquina") },
           { path: "m/:modeloId/p/:problemaId", lazy: () => import("../paginas/Instrucao") },
+          { path: "abrir-chamado", lazy: () => import("../paginas/AbrirChamado") },
           { path: "chamado", lazy: () => import("../paginas/Chamado") },
           { path: "chamado/:numero", lazy: () => import("../paginas/Chamado") },
           { path: "privacidade", lazy: () => import("../paginas/Privacidade") },

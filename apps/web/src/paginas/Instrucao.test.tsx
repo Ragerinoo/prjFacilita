@@ -51,11 +51,14 @@ const corpoDe = (chamada: [string, RequestInit?] | undefined) =>
   JSON.parse((chamada?.[1]?.body as string | undefined) ?? "null");
 
 function Maquina() {
-  const estado = useLocation().state as { abrirAssistente?: boolean } | null;
+  return <h1>Página da máquina</h1>;
+}
+function AbrirChamado() {
+  const estado = useLocation().state as { contexto?: string } | null;
   return (
     <div>
-      <h1>Página da máquina</h1>
-      <p>{estado?.abrirAssistente ? "abrir assistente" : "sem pedido"}</p>
+      <h1>Abrir um chamado</h1>
+      <p>{estado?.contexto}</p>
     </div>
   );
 }
@@ -66,6 +69,7 @@ function renderizar(caminho = "/m/tres-passione/p/1") {
       { path: "/m/:modeloId", Component: Maquina },
       { path: "/m/:modeloId/p/:problemaId", Component },
       { path: "/chamado/:numero", element: <h1>Chamado</h1> },
+      { path: "/abrir-chamado", Component: AbrirChamado },
     ],
     { initialEntries: [caminho] },
   );
@@ -170,10 +174,10 @@ describe("passos da instrução", () => {
     expect(await screen.findByText(MENSAGEM_SEM_INSTRUCAO)).toBeInTheDocument();
     expect(await axe(container)).toHaveNoViolations();
     expect(screen.getByRole("link", { name: "Voltar para a página da máquina" })).toHaveAttribute("href", "/m/tres-passione");
-    await userEvent.click(screen.getByRole("button", { name: "Abrir o assistente" }));
+    await userEvent.click(screen.getByRole("button", { name: "Abrir chamado" }));
 
-    expect(await screen.findByText("abrir assistente")).toBeInTheDocument();
-    expect(router.state.location.pathname).toBe("/m/tres-passione");
+    expect(await screen.findByText("Fluxo 1 - modelo tres-passione")).toBeInTheDocument();
+    expect(router.state.location.pathname).toBe("/abrir-chamado");
     expect(sessionStorage.getItem("tres.jornada_id")).toBe("J1");
     expect(chamadas(fetchMock, "POST", "/api/pub/jornadas")).toHaveLength(0);
   });
@@ -346,8 +350,8 @@ describe("O problema foi solucionado?", () => {
     expect(await axe(container)).toHaveNoViolations();
 
     await usuario.click(screen.getByRole("button", { name: TEXTO_PREFIRO_ASSISTENTE }));
-    expect(await screen.findByText("abrir assistente")).toBeInTheDocument();
-    expect(router.state.location.pathname).toBe("/m/tres-passione");
+    expect(await screen.findByText("Fluxo 1 - modelo tres-passione")).toBeInTheDocument();
+    expect(router.state.location.pathname).toBe("/abrir-chamado");
     expect(sessionStorage.getItem("tres.jornada_id")).toBe("J1");
   });
 
