@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef, useState, type ReactNode } from "react";
 import { Link, Navigate, useNavigate, useParams } from "react-router";
+import type { EstadoAbrirChamado } from "../api/abrirChamado";
 import { api } from "../api/cliente";
 import { filaEventos } from "../api/filaEventos";
 import {
@@ -27,7 +28,7 @@ export const MENSAGEM_SEM_INSTRUCAO = "Não temos instrução disponível para e
 export const MENSAGEM_FALHA_RESPOSTA = "Não foi possível registrar a sua resposta. Tente novamente.";
 export const MENSAGEM_REPASSE_NAO_INICIADO =
   "O encaminhamento para uma pessoa não foi iniciado. Seus dados foram guardados.";
-export const TEXTO_PREFIRO_ASSISTENTE = "Prefiro descrever ao assistente";
+export const TEXTO_PREFIRO_ASSISTENTE = "Prefiro abrir um chamado";
 
 type Repasse = { estado: "enviando" } | { estado: "ok"; numero?: string } | { estado: "erro"; tentativas: number };
 type MotivoRepasse = "nao_resolveu" | "vazamento_interno";
@@ -231,10 +232,10 @@ function SemInstrucao({ modeloId, aoAbrirAssistente }: { modeloId: string; aoAbr
   return (
     <section aria-labelledby="sem-instrucao">
       <Titulo id="sem-instrucao">{MENSAGEM_SEM_INSTRUCAO}</Titulo>
-      <p>Você pode contar o que acontece ao assistente ou voltar e escolher outra opção.</p>
+      <p>Você pode abrir um chamado para a nossa equipe ou voltar e escolher outra opção.</p>
       <div className="grupo-alvos grupo-alvos--coluna">
         <button type="button" className="botao instrucao__opcao" onClick={aoAbrirAssistente}>
-          Abrir o assistente
+          Abrir chamado
         </button>
         <Link className="botao botao--secundario instrucao__opcao" to={`/m/${encodeURIComponent(modeloId)}`}>
           Voltar para a página da máquina
@@ -346,13 +347,10 @@ function Fluxo({ jornadaId, modeloId, problemaId }: PropsFluxo) {
     }
   }
 
-  /**
-   * Ponto de integração com o Assistente_IA (tarefa 19): volta à Pagina_Maquina
-   * com o mesmo `jornada_id` e o pedido para abrir o painel. Hoje a página ainda
-   * não lê esse estado; o assistente também ainda não existe.
-   */
+  /** Em vez do assistente, leva ao formulário de chamado com o contexto do fluxo. */
   function abrirAssistente() {
-    void navegar(`/m/${encodeURIComponent(modeloId)}`, { state: { abrirAssistente: true } });
+    const estado: EstadoAbrirChamado = { contexto: `Fluxo ${problemaId} - modelo ${modeloId}` };
+    void navegar("/abrir-chamado", { state: estado });
   }
 
   switch (fase.tipo) {

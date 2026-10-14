@@ -1,5 +1,7 @@
 # Design Document: TRES Autoatendimento
 
+> **Nota (estado atual):** o projeto não usa mais AWS nem IA/assistente; roda local, sem AWS. O formulário "Abrir chamado" substituiu o assistente como ponto de entrada. Este documento descreve o desenho original e não foi reescrito. Veja `docs/ESTADO_ATUAL.md`.
+
 ## Overview
 
 O TRES Autoatendimento é um canal web único para consumidores de máquinas de café TRES (3corações) resolverem sozinhos o que não é defeito e chegarem ao atendimento humano só quando necessário. Este documento descreve o design técnico (greenfield) que atende aos 20 requisitos de `requirements.md`, com foco em um **MVP demonstrável de ponta a ponta em 2 dias**:

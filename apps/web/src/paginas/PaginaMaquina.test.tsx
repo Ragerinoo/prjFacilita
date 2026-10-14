@@ -93,6 +93,7 @@ function renderizar(entradas: string[] = ["/m/tres-passione"], indice?: number) 
       { path: "/", Component: Busca },
       { path: "/m/:modeloId", Component },
       { path: "/m/:modeloId/p/:problemaId", element: <h1>Instrução</h1> },
+      { path: "/abrir-chamado", element: <h1>Abrir um chamado</h1> },
     ],
     { initialEntries: entradas, initialIndex: indice },
   );
@@ -257,23 +258,19 @@ describe("escolha do problema", () => {
     expect(chamadas(fetchMock, "POST", "/api/pub/jornadas")).toHaveLength(0);
   });
 
-  it("'Meu problema não está na lista' abre o painel do assistente mantendo a Jornada e a página", async () => {
+  it("'Meu problema não está na lista' leva ao formulário de abrir chamado com o contexto, mantendo a Jornada", async () => {
     const fetchMock = simularApi();
-    const { router, container } = renderizar();
+    const { router } = renderizar();
     const opcao = await screen.findByRole("button", { name: TEXTO_OUTRO_PROBLEMA });
     await waitFor(() => expect(sessionStorage.getItem("tres.jornada_id")).toBe("J1"));
-    expect(opcao).toHaveAttribute("aria-expanded", "false");
-
     await userEvent.click(opcao);
-
-    expect(screen.getByRole("heading", { name: "Fale com o assistente" })).toHaveFocus();
-    expect(opcao).toHaveAttribute("aria-expanded", "true");
-    expect(router.state.location.pathname).toBe("/m/tres-passione");
+    expect(await screen.findByRole("heading", { name: "Abrir um chamado" })).toBeInTheDocument();
+    expect(router.state.location.pathname).toBe("/abrir-chamado");
+    expect(router.state.location.state).toMatchObject({ categoria: "outro" });
+    expect(router.state.location.state.contexto).toContain("tres-passione");
     expect(sessionStorage.getItem("tres.jornada_id")).toBe("J1");
     expect(chamadas(fetchMock, "POST", "/api/pub/jornadas")).toHaveLength(1);
-    expect(await axe(container)).toHaveNoViolations();
   });
-
   it("recarregar o QR não cria uma segunda Jornada para o mesmo código", async () => {
     const fetchMock = simularApi();
     const primeira = renderizar(["/m/tres-passione?s=ABC"]);
