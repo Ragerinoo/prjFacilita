@@ -1,0 +1,89 @@
+/* Página do Chamado: confirmação, contato e fotos (mobile-first). */
+.chamado__secao {
+  margin-block: calc(var(--espaco) * 3);
+}
+.chamado__numero {
+  font-size: 1.25rem;
+  letter-spacing: 0.04em;
+}
+.chamado__dados dt {
+  font-weight: 700;
+  margin-top: var(--espaco);
+}
+.chamado__dados dd {
+  margin: 0;
+}
+.chamado__aviso {
+  padding: var(--espaco) calc(var(--espaco) * 2);
+  border: 2px solid var(--cor-borda);
+  border-radius: 4px;
+}
+.chamado__campo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco);
+  margin-bottom: calc(var(--espaco) * 2);
+}
+.chamado__campo label,
+.chamado__rotulo {
+  font-weight: 700;
+}
+.chamado__ajuda {
+  margin: 0;
+}
+.chamado__erro {
+  margin: 0;
+  color: #9b1c1c; /* contraste 7,3:1 sobre branco */
+  font-weight: 700;
+}
+.chamado__consentimento {
+  display: flex;
+  align-items: center;
+  gap: var(--espaco);
+}
+.chamado__enviar {
+  width: 100%;
+  min-height: 56px;
+}
+.chamado__enviar:disabled {
+  color: #4d4d4d;
+  background: #e6e6e6;
+  border-color: var(--cor-borda);
+  cursor: not-allowed;
+}
+.chamado__fotos {
+  padding-left: calc(var(--espaco) * 2);
+}
+
+/* Acompanhamento: mensagens, resposta e consulta por número. */
+.chamado__mensagens {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco);
+  margin: 0 0 calc(var(--espaco) * 2);
+  padding: 0;
+  list-style: none;
+}
+.chamado__mensagem {
+  padding: var(--espaco) calc(var(--espaco) * 2);
+  border: 2px solid var(--cor-borda);
+  border-radius: 4px;
+}
+.chamado__mensagem--atendente {
+  border-left-width: 8px;
+}
+.chamado__mensagem p {
+  margin: 0;
+}
+.chamado__mensagem-texto {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.chamado__resposta textarea,
+.chamado__consulta input {
+  padding: var(--espaco);
+  font-family: inherit;
+}
+.chamado__resposta textarea {
+  min-height: 6rem;
+}

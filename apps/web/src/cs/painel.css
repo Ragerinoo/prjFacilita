@@ -1,0 +1,65 @@
+/* Painel_CS: layout próprio, sem o cabeçalho e o rodapé do Portal. */
+.painel__cabecalho {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--espaco) calc(var(--espaco) * 2);
+  padding: calc(var(--espaco) * 2);
+  border-bottom: 2px solid var(--cor-borda);
+}
+
+.painel__marca {
+  margin: 0;
+  font-weight: 700;
+}
+
+.painel__usuario {
+  margin: 0;
+  margin-left: auto;
+}
+
+.painel__menu {
+  display: flex;
+  flex-basis: 100%;
+  flex-wrap: wrap;
+  gap: var(--espaco);
+}
+
+.painel__menu a {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 calc(var(--espaco) * 2);
+  border-radius: 4px;
+}
+
+.painel__menu a[aria-current="page"] {
+  font-weight: 700;
+  text-decoration: none;
+  border: 2px solid var(--cor-primaria);
+}
+
+.painel__conteudo {
+  max-width: 72rem;
+}
+
+.login-cs {
+  max-width: 28rem;
+}
+
+.login-cs__campo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco);
+  margin-bottom: calc(var(--espaco) * 2);
+}
+
+.login-cs__aviso,
+.login-cs__erro {
+  padding: calc(var(--espaco) * 1.5);
+  border: 2px solid var(--cor-borda);
+  border-radius: 4px;
+}
+
+.login-cs__erro {
+  font-weight: 700;
+}

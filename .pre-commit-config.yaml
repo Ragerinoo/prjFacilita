@@ -1,0 +1,8 @@
+# Hooks de pré-commit. Requisito 20.5.
+# Instalação local: pip install pre-commit && pre-commit install
+repos:
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.18.4
+    hooks:
+      - id: gitleaks
+        # Usa o .gitleaks.toml da raiz do repositório automaticamente.

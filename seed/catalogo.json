@@ -1,0 +1,48 @@
+{
+  "_aviso": "CONTEÚDO DE EXEMPLO. Nomes, fotos e voltagens devem ser substituídos pelos dados oficiais da 3corações (Q20).",
+  "modelos": [
+    {
+      "modelo_id": "tres-passione",
+      "nome": "TRES Passione",
+      "voltagens": [
+        "110V",
+        "220V"
+      ],
+      "manuais": [
+        "manuais/tres-passione/manual-exemplo.md"
+      ],
+      "demo": true,
+      "ativo": true,
+      "nome_normalizado": "tres passione",
+      "foto_url": "/midia/exemplo/foto-tres-passione.svg",
+      "conteudo_exemplo": true
+    },
+    {
+      "modelo_id": "tres-circo",
+      "nome": "TRES Circo",
+      "voltagens": [
+        "110V",
+        "220V"
+      ],
+      "manuais": [],
+      "demo": false,
+      "ativo": true,
+      "nome_normalizado": "tres circo",
+      "foto_url": "/midia/exemplo/foto-tres-circo.svg",
+      "conteudo_exemplo": true
+    },
+    {
+      "modelo_id": "tres-mimo",
+      "nome": "TRES Mimo",
+      "voltagens": [
+        "110V"
+      ],
+      "manuais": [],
+      "demo": false,
+      "ativo": true,
+      "nome_normalizado": "tres mimo",
+      "foto_url": "/midia/exemplo/foto-tres-mimo.svg",
+      "conteudo_exemplo": true
+    }
+  ]
+}

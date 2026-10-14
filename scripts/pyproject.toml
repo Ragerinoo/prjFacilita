@@ -1,0 +1,33 @@
+[project]
+name = "tres-scripts"
+version = "0.1.0"
+description = "Scripts operacionais do TRES Autoatendimento (carga do seed, QR codes)."
+requires-python = ">=3.12"
+dependencies = [
+    "boto3==1.43.112",
+    "jsonschema==4.26.0",
+    "segno==1.6.6",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest==9.1.1",
+    "hypothesis==6.169.0",
+    "moto[dynamodb,s3]==5.2.4",
+    "ruff==0.17.0",
+]
+
+# Scripts, não biblioteca: os módulos ficam em ``scripts/`` e importam ``dominio`` (regras puras)
+# e ``premissas`` (constantes do agente) pelo repositório.
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = [".", "../packages/dominio/src", "../services/agente"]
+addopts = "-ra --strict-markers"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+src = [".", "../packages/dominio/src", "../services/agente"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]

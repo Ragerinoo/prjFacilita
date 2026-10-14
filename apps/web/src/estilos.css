@@ -1,0 +1,182 @@
+/* Mobile-first (Req 19.1, 19.3): estilos base para 360 px; telas maiores só ampliam. */
+:root {
+  --cor-texto: #1a1a1a;
+  --cor-fundo: #ffffff;
+  --cor-primaria: #0b5cab; /* contraste 6,9:1 sobre branco */
+  --cor-foco: #8a4b00; /* contraste 6,6:1 sobre branco (mínimo de 3:1, Req 19.4) */
+  --cor-borda: #595959; /* contraste 7:1; bordas de controles precisam de 3:1 (Req 19.3) */
+  --cor-texto-sobre-primaria: #ffffff;
+  --espaco: 8px;
+  color-scheme: light;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%; /* respeita a preferência de fonte do usuário */
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 1rem; /* mínimo de 16 px (design.md, Acessibilidade) */
+  line-height: 1.5;
+  color: var(--cor-texto);
+  background: var(--cor-fundo);
+  overflow-wrap: anywhere; /* evita corte de texto e rolagem horizontal */
+}
+
+main {
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: calc(var(--espaco) * 2);
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--cor-primaria);
+}
+
+a,
+button,
+input,
+select,
+textarea {
+  min-height: 44px; /* alvo de toque mínimo (Req 19.3) */
+  min-width: 44px;
+}
+
+/* Nenhum texto de conteúdo abaixo de 16 px (Req 19.8). */
+small,
+sub,
+sup,
+figcaption,
+label,
+legend,
+input,
+select,
+textarea,
+button {
+  font-size: 1rem;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  width: 44px;
+  height: 44px;
+}
+
+input,
+select,
+textarea {
+  border: 2px solid var(--cor-borda);
+  border-radius: 4px;
+  padding: 0 var(--espaco);
+  font-family: inherit;
+  color: var(--cor-texto);
+  background: var(--cor-fundo);
+}
+
+/* Espaço mínimo de 8 px entre alvos de toque vizinhos (Req 19.3). */
+.grupo-alvos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espaco);
+}
+.grupo-alvos--coluna {
+  flex-direction: column;
+}
+.rodape a + a,
+.cabecalho a + a {
+  margin-left: var(--espaco);
+}
+
+.botao {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 calc(var(--espaco) * 2);
+  border: 2px solid var(--cor-primaria);
+  border-radius: 4px;
+  font-family: inherit;
+  font-weight: 700;
+  color: var(--cor-texto-sobre-primaria);
+  background: var(--cor-primaria);
+  cursor: pointer;
+}
+.botao--secundario {
+  color: var(--cor-primaria);
+  background: var(--cor-fundo);
+}
+
+.erro-carregamento {
+  padding: calc(var(--espaco) * 2);
+  border: 2px solid var(--cor-borda);
+  border-radius: 4px;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible,
+main:focus-visible {
+  outline: 3px solid var(--cor-foco);
+  outline-offset: 2px;
+}
+
+.cabecalho,
+.rodape {
+  padding: calc(var(--espaco) * 2);
+}
+
+.cabecalho__marca,
+.rodape a {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 700;
+}
+
+.pular-conteudo {
+  position: absolute;
+  left: var(--espaco);
+  top: -100px;
+  padding: var(--espaco);
+  background: var(--cor-fundo);
+}
+
+.pular-conteudo:focus {
+  top: var(--espaco);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Texto só para leitores de tela (usado em várias páginas). */
+.so-leitor {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}

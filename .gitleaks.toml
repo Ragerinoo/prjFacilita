@@ -1,0 +1,27 @@
+# Configuração do gitleaks (varredura de segredos). Requisito 20.5.
+# Usada pelo hook de pré-commit e pelo job "segredos" do CI.
+title = "TRES Autoatendimento - gitleaks"
+
+[extend]
+# Mantém todas as regras padrão (chaves AWS, tokens, chaves privadas etc.).
+useDefault = true
+
+# Regra extra: senhas/segredos atribuídos a variáveis conhecidas do projeto.
+[[rules]]
+id = "tres-env-secret"
+description = "Valor atribuído a variável sensível do projeto (ex.: CS_SENHA_INICIAL)"
+regex = '''(?i)(CS_SENHA_INICIAL|AWS_SECRET_ACCESS_KEY|AWS_SESSION_TOKEN)\s*[:=]\s*['"]?[^\s'"#$<{]{4,}'''
+keywords = ["cs_senha_inicial", "aws_secret_access_key", "aws_session_token"]
+
+[allowlist]
+description = "Arquivos sem segredos reais"
+paths = [
+  # Contém apenas nomes de variáveis, sem valores.
+  '''(^|/)\.env\.example$''',
+  # Dependências e artefatos gerados.
+  '''(^|/)node_modules/''',
+  '''(^|/)cdk\.out/''',
+  '''(^|/)\.venv/''',
+  '''(^|/)\.hypothesis/''',
+  '''package-lock\.json$''',
+]

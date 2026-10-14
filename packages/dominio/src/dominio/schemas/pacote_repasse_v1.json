@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "pacote-repasse/1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "numero_chamado", "modelo", "numero_serie", "origem",
+    "categoria", "resumo", "ja_tentado", "classificacao", "prioridade",
+    "canal_recomendado", "sentimento", "anexos", "proxima_acao"
+  ],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "numero_chamado": { "type": "string", "pattern": "^TRES-[0-9A-HJKMNP-TV-Z]{10}$(?!\\n)" },
+    "modelo": { "type": "string", "minLength": 1, "maxLength": 80 },
+    "numero_serie": { "type": "string", "pattern": "^([A-Za-z0-9]{1,30}|não informado)$(?!\\n)" },
+    "origem": { "enum": ["qr", "busca"] },
+    "categoria": {
+      "enum": [
+        "nao_liga", "luz_vermelha_fixa", "alerta_vermelho_piscando", "teclas_e_sensor_vermelho_piscando",
+        "luz_amarela", "nao_extrai", "bebida_aguada", "bebida_fria", "alavanca_travada",
+        "vazamento", "nao_puxa_agua", "bico_entupido", "alavanca_nao_fecha_com_capsula", "outro"
+      ]
+    },
+    "resumo": { "type": "string", "minLength": 1, "maxLength": 300 },
+    "ja_tentado": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["passo", "camada", "resultado"],
+        "properties": {
+          "passo": { "type": "string", "minLength": 1, "maxLength": 200 },
+          "camada": { "enum": ["guia", "ia"] },
+          "resultado": { "enum": ["sim", "não", "sem resposta"] }
+        }
+      }
+    },
+    "classificacao": { "enum": ["provável defeito", "provável uso"] },
+    "prioridade": { "enum": ["P1", "P2", "P3"] },
+    "canal_recomendado": {
+      "enum": ["ligação imediata", "chat ou ligação, à escolha do Consumidor", "chat assíncrono"]
+    },
+    "sentimento": { "enum": ["neutro", "frustração moderada", "frustração alta"] },
+    "anexos": {
+      "type": "array", "maxItems": 3,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["chave", "mime"],
+        "properties": {
+          "chave": { "type": "string", "minLength": 1 },
+          "mime": { "enum": ["image/jpeg", "image/png"] }
+        }
+      }
+    },
+    "proxima_acao": { "type": "string", "minLength": 1, "maxLength": 200 }
+  }
+}

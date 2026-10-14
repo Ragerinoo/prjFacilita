@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools==80.9.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tres-infra"
+version = "0.1.0"
+description = "Infraestrutura como código (AWS CDK em Python) do TRES Autoatendimento."
+requires-python = ">=3.12"
+dependencies = [
+    "aws-cdk-lib==2.273.0",
+    "constructs==10.8.1",
+    "boto3==1.43.112",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest==9.1.1",
+    "hypothesis==6.169.0",
+    "jsonschema==4.26.0",
+    "moto[dynamodb,s3,sqs,kms]==5.2.4",
+    "ruff==0.17.0",
+]
+
+# Projeto CDK (não biblioteca): app.py e stacks ficam na raiz do diretório.
+[tool.setuptools]
+packages = []
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-ra --strict-markers"
+
+# Perfis do Hypothesis (tests/conftest.py): default=100 exemplos, ci=200 (HYPOTHESIS_PROFILE=ci).
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+extend-exclude = ["cdk.out"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]

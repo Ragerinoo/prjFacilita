@@ -1,0 +1,31 @@
+/* Alerta de risco (Req 8.3): sempre no topo, sem botão de fechar. Cores com contraste acima de 7:1. */
+.alerta-risco {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding: calc(var(--espaco) * 2);
+  border: 4px solid #8b0000;
+  background: #fff4f4;
+  color: var(--cor-texto);
+}
+
+.alerta-risco__orientacao {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.alerta-risco__contato {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco);
+  margin-top: var(--espaco);
+}
+
+.alerta-risco__contato p {
+  margin: 0;
+}
+
+.alerta-risco__contato .botao {
+  align-self: flex-start;
+}

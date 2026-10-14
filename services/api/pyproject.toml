@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools==80.9.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tres-api"
+version = "0.1.0"
+description = "Lambda Python (roteador único) das rotas /api/pub e /api/cs do TRES Autoatendimento."
+requires-python = ">=3.12"
+dependencies = [
+    "boto3==1.43.112",
+    "jsonschema==4.26.0",
+    "argon2-cffi==25.1.0",
+    "argon2-cffi-bindings==21.2.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest==9.1.1",
+    "hypothesis==6.169.0",
+    "moto[dynamodb,s3,sqs,kms]==5.2.4",
+    "ruff==0.17.0",
+]
+
+# Serviço (não biblioteca): o código fica na raiz do diretório e o pacote `dominio`
+# é resolvido via `pythonpath` do pytest (instale também: pip install -e ../../packages/dominio).
+[tool.setuptools]
+packages = []
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = [".", "../../packages/dominio/src"]
+addopts = "-ra --strict-markers"
+
+# Perfis do Hypothesis (tests/conftest.py): default=100 exemplos, ci=200 (HYPOTHESIS_PROFILE=ci).
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+src = [".", "../../packages/dominio/src"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]

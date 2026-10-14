@@ -1,0 +1,109 @@
+{
+  "problemas": [
+    {
+      "problema_id": 1,
+      "ordem": 1,
+      "slug": "nao_liga",
+      "titulo": "Máquina não está ligando",
+      "icone": "power",
+      "icone_alt": "Ícone de botão de ligar"
+    },
+    {
+      "problema_id": 2,
+      "ordem": 2,
+      "slug": "luz_vermelha_fixa",
+      "titulo": "Luz vermelha fixa",
+      "icone": "luz-vermelha",
+      "icone_alt": "Ícone de luz vermelha acesa"
+    },
+    {
+      "problema_id": 3,
+      "ordem": 3,
+      "slug": "alerta_vermelho_piscando",
+      "titulo": "Alerta vermelho piscando",
+      "icone": "alerta",
+      "icone_alt": "Ícone de alerta vermelho piscando"
+    },
+    {
+      "problema_id": 4,
+      "ordem": 4,
+      "slug": "teclas_e_sensor_vermelho_piscando",
+      "titulo": "Teclas e sensor vermelho piscando",
+      "icone": "teclas",
+      "icone_alt": "Ícone de teclas das xícaras piscando"
+    },
+    {
+      "problema_id": 5,
+      "ordem": 5,
+      "slug": "luz_amarela",
+      "titulo": "Luz amarela acesa",
+      "icone": "luz-amarela",
+      "icone_alt": "Ícone de luz amarela acesa"
+    },
+    {
+      "problema_id": 6,
+      "ordem": 6,
+      "slug": "nao_extrai",
+      "titulo": "Não extrai bebidas",
+      "icone": "xicara-vazia",
+      "icone_alt": "Ícone de xícara vazia"
+    },
+    {
+      "problema_id": 7,
+      "ordem": 7,
+      "slug": "bebida_aguada",
+      "titulo": "Bebida aguada",
+      "icone": "gota",
+      "icone_alt": "Ícone de xícara com bebida clara"
+    },
+    {
+      "problema_id": 8,
+      "ordem": 8,
+      "slug": "bebida_fria",
+      "titulo": "Bebida fria",
+      "icone": "termometro",
+      "icone_alt": "Ícone de termômetro indicando frio"
+    },
+    {
+      "problema_id": 9,
+      "ordem": 9,
+      "slug": "alavanca_travada",
+      "titulo": "Alavanca travada",
+      "icone": "alavanca",
+      "icone_alt": "Ícone de alavanca travada"
+    },
+    {
+      "problema_id": 10,
+      "ordem": 10,
+      "slug": "vazamento",
+      "titulo": "Vazamento",
+      "icone": "vazamento",
+      "icone_alt": "Ícone de gota de água caindo"
+    },
+    {
+      "problema_id": 11,
+      "ordem": 11,
+      "slug": "nao_puxa_agua",
+      "titulo": "Não puxa água",
+      "icone": "reservatorio",
+      "icone_alt": "Ícone de reservatório de água"
+    },
+    {
+      "problema_id": 12,
+      "ordem": 12,
+      "slug": "bico_entupido",
+      "titulo": "Bico entupido",
+      "icone": "bico",
+      "icone_alt": "Ícone de bico da máquina"
+    },
+    {
+      "problema_id": 13,
+      "ordem": 13,
+      "slug": "alavanca_nao_fecha_com_capsula",
+      "titulo": "Alavanca não fecha com cápsula",
+      "icone": "capsula",
+      "icone_alt": "Ícone de cápsula de café"
+    }
+  ],
+  "_nota": "Título do problema 4 abreviado para respeitar o limite de 40 caracteres do Req 3.1 (o nome completo 'Teclas das xícaras e sensor vermelho piscando' tem 45)."
+}

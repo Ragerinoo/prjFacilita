@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools==80.9.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tres-agente"
+version = "0.1.0"
+description = "Agente Strands para o AgentCore Runtime do TRES Autoatendimento."
+requires-python = ">=3.12"
+dependencies = [
+    "strands-agents==1.60.0",
+    "boto3==1.43.112",
+    "jsonschema==4.26.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest==9.1.1",
+    "hypothesis==6.169.0",
+    "moto[s3,sqs]==5.2.4",
+    "ruff==0.17.0",
+]
+
+# Serviço (não biblioteca): módulos na raiz (ex.: premissas.py); `dominio` via pythonpath.
+[tool.setuptools]
+packages = []
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = [".", "../../packages/dominio/src"]
+addopts = "-ra --strict-markers"
+
+# Perfis do Hypothesis (tests/conftest.py): default=100 exemplos, ci=200 (HYPOTHESIS_PROFILE=ci).
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+src = [".", "../../packages/dominio/src"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]

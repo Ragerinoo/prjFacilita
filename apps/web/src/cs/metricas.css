@@ -1,0 +1,68 @@
+.metricas__erro {
+  padding: calc(var(--espaco) * 1.5);
+  border: 2px solid var(--cor-borda);
+  border-radius: 4px;
+}
+
+.metricas__totais {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espaco) calc(var(--espaco) * 2);
+  margin: 0 0 calc(var(--espaco) * 3);
+}
+
+.metricas__total {
+  min-width: 12rem;
+  padding: calc(var(--espaco) * 1.5);
+  border: 2px solid var(--cor-borda);
+  border-radius: 4px;
+}
+
+.metricas__total dt {
+  margin: 0;
+}
+
+.metricas__total dd {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.metricas__secao {
+  margin-bottom: calc(var(--espaco) * 3);
+}
+
+.metricas__tabela {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.metricas__tabela th,
+.metricas__tabela td {
+  padding: var(--espaco) calc(var(--espaco) * 1.5);
+  border: 1px solid var(--cor-borda);
+  text-align: left;
+  vertical-align: middle;
+}
+
+.metricas__tabela th {
+  font-weight: 700;
+  border-bottom-width: 2px;
+}
+
+.metricas__numero {
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* A barra é só reforço visual: o número fica sempre em texto na coluna ao lado.
+   Contorno e fundo garantem a leitura sem depender de cor. */
+.metricas__barra {
+  display: block;
+  min-width: 2px;
+  height: 1rem;
+  box-sizing: border-box;
+  border: 2px solid #0b5cab;
+  background: repeating-linear-gradient(45deg, #0b5cab, #0b5cab 4px, #ffffff 4px, #ffffff 8px);
+  border-radius: 2px;
+}

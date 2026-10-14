@@ -1,0 +1,183 @@
+/* Tela de Insights. Nada depende só de cor: bordas, texto e tabelas equivalentes carregam o significado. */
+
+.insights-somente-leitor {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.insights-aviso {
+  display: inline-block;
+  margin: 0 0 calc(var(--espaco) * 2);
+  padding: var(--espaco) calc(var(--espaco) * 1.5);
+  border: 2px dashed var(--cor-borda);
+  border-radius: 4px;
+  font-weight: 700;
+}
+
+.insights-erro {
+  padding: calc(var(--espaco) * 1.5);
+  border: 2px solid var(--cor-borda);
+  border-radius: 4px;
+}
+
+.insights-nota {
+  margin: calc(var(--espaco) * -2) 0 calc(var(--espaco) * 3);
+  font-size: 0.875rem;
+}
+
+.insights-secao {
+  margin-bottom: calc(var(--espaco) * 3);
+}
+
+.insights-secao--secundaria {
+  padding-top: calc(var(--espaco) * 2);
+  border-top: 2px solid var(--cor-borda);
+}
+
+/* Seletor de período */
+.insights-seletor {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: var(--espaco) calc(var(--espaco) * 2);
+  margin-bottom: calc(var(--espaco) * 3);
+}
+
+.insights-seletor__campo {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--espaco) / 2);
+}
+
+.insights-seletor__erro {
+  flex-basis: 100%;
+  margin: 0;
+  padding: var(--espaco) calc(var(--espaco) * 1.5);
+  border: 2px solid #8f1d1d;
+  border-left-width: 8px;
+  border-radius: 4px;
+  font-weight: 700;
+}
+
+/* Cards */
+.insights-cartoes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: var(--espaco) calc(var(--espaco) * 2);
+  margin: 0;
+}
+
+.insights-cartao {
+  padding: calc(var(--espaco) * 1.5);
+  border: 2px solid var(--cor-borda);
+  border-radius: 4px;
+}
+
+.insights-cartao dt {
+  margin: 0;
+}
+
+.insights-cartao dd {
+  margin: 0;
+}
+
+.insights-cartao__valor {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.insights-cartao__detalhe {
+  font-size: 0.875rem;
+}
+
+/* Tabelas */
+.insights-tabela {
+  width: 100%;
+  margin-bottom: calc(var(--espaco) * 2);
+  border-collapse: collapse;
+}
+
+.insights-tabela th,
+.insights-tabela td {
+  padding: var(--espaco) calc(var(--espaco) * 1.5);
+  border: 1px solid var(--cor-borda);
+  text-align: left;
+  vertical-align: middle;
+}
+
+.insights-tabela th {
+  font-weight: 700;
+  border-bottom-width: 2px;
+}
+
+.insights-tabela__numero {
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.insights-tabela__texto {
+  overflow-wrap: anywhere;
+}
+
+/* Comentários */
+.insights-comentarios {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.insights-comentario {
+  padding: calc(var(--espaco) * 1.5);
+  border: 2px solid var(--cor-borda);
+  border-left-width: 8px;
+  border-radius: 4px;
+}
+
+.insights-comentario p {
+  margin: 0 0 calc(var(--espaco) / 2);
+}
+
+.insights-comentario__meta {
+  font-weight: 700;
+}
+
+.insights-comentario__texto {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+/* Gráficos: `color` define a cor das barras (via `fill="currentColor"`). */
+.insights-grafico {
+  margin: 0 0 calc(var(--espaco) * 2);
+}
+
+.insights-grafico figcaption {
+  margin-bottom: calc(var(--espaco) / 2);
+  font-weight: 700;
+}
+
+.insights-grafico__descricao {
+  margin: 0 0 var(--espaco);
+  font-size: 0.875rem;
+}
+
+.insights-grafico__area {
+  width: 100%;
+  min-width: 0;
+  padding: var(--espaco);
+  border: 2px solid var(--cor-borda);
+  border-radius: 4px;
+  box-sizing: border-box;
+  /* Azul escuro: contraste ~7:1 sobre branco; os valores também ficam em texto sobre as barras. */
+  color: #0b5cab;
+}

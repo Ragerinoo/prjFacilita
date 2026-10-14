@@ -1,0 +1,45 @@
+/* Tela de instrução: passo a passo, pergunta "Resolveu?", avaliação e repasse (mobile-first). */
+.instrucao__aviso {
+  padding: var(--espaco) calc(var(--espaco) * 2);
+  border: 2px solid var(--cor-borda);
+  border-radius: 4px;
+}
+
+.instrucao__acao,
+.instrucao__opcao {
+  width: 100%;
+  min-height: 56px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.passo__texto {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.passo__equivalente {
+  margin: calc(var(--espaco) * 2) 0;
+}
+
+.midia {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--espaco);
+  margin: 0 0 calc(var(--espaco) * 2);
+}
+
+.midia img,
+.midia video {
+  width: 100%;
+  max-height: 20rem;
+  object-fit: contain;
+}
+
+.midia--texto {
+  align-items: stretch;
+  padding: var(--espaco) calc(var(--espaco) * 2);
+  border: 2px dashed var(--cor-borda);
+  border-radius: 4px;
+}

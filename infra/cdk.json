@@ -1,0 +1,17 @@
+{
+  "app": "python3 app.py",
+  "watch": {
+    "include": ["**"],
+    "exclude": ["README.md", "cdk*.json", "**/__pycache__", "tests", ".venv", "cdk.out"]
+  },
+  "context": {
+    "prefixo": "tres",
+    "destruir_ao_remover": false,
+    "@aws-cdk/aws-lambda:recognizeLayerVersion": true,
+    "@aws-cdk/core:checkSecretUsage": true,
+    "@aws-cdk/core:target-partitions": ["aws", "aws-cn"],
+    "@aws-cdk/aws-iam:minimizePolicies": true,
+    "@aws-cdk/aws-kms:aliasNameRef": true,
+    "@aws-cdk/aws-kms:applyImportedAliasPermissionsToPrincipal": true
+  }
+}

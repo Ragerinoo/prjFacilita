@@ -1,0 +1,219 @@
+{
+  "_aviso": "MAPA DE EXEMPLO para o layout ilustrativo de midia/exemplo/seletor-tres-passione.svg. Coordenadas em % da imagem (400x500). Áreas >= 16% x 12% garantem 44x44 px CSS em telas de 320 px.",
+  "modelo_id": "tres-passione",
+  "conteudo_exemplo": true,
+  "imagem_url": "/midia/exemplo/seletor-tres-passione.svg",
+  "imagem_alt": "Ilustração da frente da máquina com luzes, teclas, alavanca, reservatório e bico",
+  "areas": [
+    {
+      "area": "luz_alerta",
+      "rotulo": "Luz de alerta vermelha",
+      "forma": {
+        "tipo": "retangulo",
+        "x": 10,
+        "y": 8,
+        "largura": 16,
+        "altura": 12
+      },
+      "estados": [
+        {
+          "estado": "acesa_fixa",
+          "rotulo": "Acesa fixa"
+        },
+        {
+          "estado": "piscando",
+          "rotulo": "Piscando"
+        },
+        {
+          "estado": "apagada",
+          "rotulo": "Apagada, a máquina não liga"
+        }
+      ]
+    },
+    {
+      "area": "luz_amarela",
+      "rotulo": "Luz amarela",
+      "forma": {
+        "tipo": "retangulo",
+        "x": 30,
+        "y": 8,
+        "largura": 16,
+        "altura": 12
+      },
+      "estados": [
+        {
+          "estado": "acesa_fixa",
+          "rotulo": "Acesa fixa"
+        },
+        {
+          "estado": "piscando",
+          "rotulo": "Piscando"
+        }
+      ]
+    },
+    {
+      "area": "reservatorio",
+      "rotulo": "Reservatório de água",
+      "forma": {
+        "tipo": "retangulo",
+        "x": 60,
+        "y": 8,
+        "largura": 30,
+        "altura": 30
+      },
+      "estados": [
+        {
+          "estado": "vazando",
+          "rotulo": "Está vazando"
+        },
+        {
+          "estado": "travada",
+          "rotulo": "A água não é puxada"
+        }
+      ]
+    },
+    {
+      "area": "teclas_xicaras",
+      "rotulo": "Teclas das xícaras",
+      "forma": {
+        "tipo": "retangulo",
+        "x": 10,
+        "y": 24,
+        "largura": 40,
+        "altura": 14
+      },
+      "estados": [
+        {
+          "estado": "piscando",
+          "rotulo": "Piscando em vermelho"
+        },
+        {
+          "estado": "apagada",
+          "rotulo": "Apagadas"
+        }
+      ]
+    },
+    {
+      "area": "alavanca",
+      "rotulo": "Alavanca",
+      "forma": {
+        "tipo": "retangulo",
+        "x": 10,
+        "y": 42,
+        "largura": 80,
+        "altura": 14
+      },
+      "estados": [
+        {
+          "estado": "travada",
+          "rotulo": "Travada ou não fecha"
+        },
+        {
+          "estado": "vazando",
+          "rotulo": "Vazando água"
+        }
+      ]
+    },
+    {
+      "area": "bico",
+      "rotulo": "Bico de saída",
+      "forma": {
+        "tipo": "retangulo",
+        "x": 35,
+        "y": 60,
+        "largura": 30,
+        "altura": 14
+      },
+      "estados": [
+        {
+          "estado": "travada",
+          "rotulo": "Entupido, sai pouco"
+        },
+        {
+          "estado": "vazando",
+          "rotulo": "Pinga ou vaza"
+        }
+      ]
+    }
+  ],
+  "regras": [
+    {
+      "area": "luz_alerta",
+      "estado": "acesa_fixa",
+      "problemas": [
+        2
+      ]
+    },
+    {
+      "area": "luz_alerta",
+      "estado": "piscando",
+      "problemas": [
+        3
+      ]
+    },
+    {
+      "area": "luz_alerta",
+      "estado": "apagada",
+      "problemas": [
+        1
+      ]
+    },
+    {
+      "area": "luz_amarela",
+      "estado": "acesa_fixa",
+      "problemas": [
+        5
+      ]
+    },
+    {
+      "area": "reservatorio",
+      "estado": "vazando",
+      "problemas": [
+        10
+      ]
+    },
+    {
+      "area": "reservatorio",
+      "estado": "travada",
+      "problemas": [
+        11
+      ]
+    },
+    {
+      "area": "teclas_xicaras",
+      "estado": "piscando",
+      "problemas": [
+        4
+      ]
+    },
+    {
+      "area": "alavanca",
+      "estado": "travada",
+      "problemas": [
+        9,
+        13
+      ]
+    },
+    {
+      "area": "alavanca",
+      "estado": "vazando",
+      "problemas": [
+        10
+      ]
+    },
+    {
+      "area": "bico",
+      "estado": "travada",
+      "problemas": [
+        12
+      ]
+    },
+    {
+      "area": "bico",
+      "estado": "vazando",
+      "problemas": [
+        10
+      ]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools==80.9.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tres-dominio"
+version = "0.1.0"
+description = "Regras de negócio puras do TRES Autoatendimento (sem I/O, sem boto3, sem rede)."
+requires-python = ">=3.12"
+# Runtime: somente bibliotecas puras. boto3 e qualquer cliente de rede são proibidos
+# neste pacote (regra de pureza verificada em tests/test_pureza.py).
+dependencies = [
+    "jsonschema==4.26.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest==9.1.1",
+    "hypothesis==6.169.0",
+    "ruff==0.17.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+dominio = ["schemas/*.json", "py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-ra --strict-markers"
+
+# Perfis do Hypothesis (registrados em tests/conftest.py):
+#   default -> max_examples=100 (execução local)
+#   ci      -> max_examples=200 (HYPOTHESIS_PROFILE=ci, usado no CI)
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "TID"]
+
+# Camada de proteção extra: o lint também bloqueia importar boto3/botocore no domínio.
+[tool.ruff.lint.flake8-tidy-imports.banned-api]
+"boto3".msg = "O pacote dominio é puro: não importe boto3 (use adaptadores na API)."
+"botocore".msg = "O pacote dominio é puro: não importe botocore."
+"requests".msg = "O pacote dominio é puro: sem rede."
+"httpx".msg = "O pacote dominio é puro: sem rede."
+"urllib3".msg = "O pacote dominio é puro: sem rede."
+"socket".msg = "O pacote dominio é puro: sem rede."

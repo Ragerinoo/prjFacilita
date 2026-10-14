@@ -1,0 +1,39 @@
+# Segredos e ambiente local (Req 20.5)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Node / front-end
+node_modules/
+dist/
+coverage/
+.vite/
+*.tsbuildinfo
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.hypothesis/
+.ruff_cache/
+.mypy_cache/
+*.egg-info/
+
+# QR codes gerados (scripts/gerar_qrcodes.py)
+scripts/saida/
+# AWS CDK
+cdk.out/
+.cdk.staging/
+cdk.context.json
+
+# SO / editores
+.DS_Store
+.idea/
+.vscode/
+*.log
+.venv-demo/
+.dados-demo/

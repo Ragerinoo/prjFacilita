@@ -1,0 +1,229 @@
+/* Dashboard. Nada depende só de cor: texto, peso, bordas e tracejados carregam o significado. */
+
+.dashboard-secao {
+  margin-bottom: calc(var(--espaco) * 3);
+}
+
+.dashboard-atualizado {
+  margin: 0 0 calc(var(--espaco) * 2);
+  font-size: 0.875rem;
+}
+
+.dashboard-aviso-falha {
+  margin: 0 0 calc(var(--espaco) * 2);
+  padding: var(--espaco) calc(var(--espaco) * 1.5);
+  border: 2px solid #8f1d1d;
+  border-left-width: 8px;
+  border-radius: 4px;
+  font-weight: 700;
+}
+
+/* Cards (Visão geral e satisfação) */
+.dashboard-cartoes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: var(--espaco) calc(var(--espaco) * 2);
+  margin: 0 0 calc(var(--espaco) * 2);
+}
+
+.dashboard-cartao {
+  padding: calc(var(--espaco) * 1.5);
+  border: 2px solid var(--cor-borda);
+  border-radius: 4px;
+}
+
+.dashboard-cartao dt {
+  margin: 0;
+}
+
+.dashboard-cartao dd {
+  margin: 0;
+}
+
+.dashboard-cartao__valor {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.dashboard-cartao__detalhe {
+  font-size: 0.875rem;
+}
+
+/* Estados */
+.dashboard-estado {
+  margin: 0 0 calc(var(--espaco) * 2);
+}
+
+.dashboard-erro {
+  margin: 0 0 calc(var(--espaco) * 2);
+  padding: calc(var(--espaco) * 1.5);
+  border: 2px solid var(--cor-borda);
+  border-radius: 4px;
+}
+
+.dashboard-erro p {
+  margin: 0 0 var(--espaco);
+}
+
+.dashboard-botao {
+  padding: var(--espaco) calc(var(--espaco) * 2);
+  border: 2px solid var(--cor-borda);
+  border-radius: 4px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Abas: a selecionada tem peso 700 e borda inferior de 3 px, além de aria-selected. */
+.dashboard-abas {
+  margin-bottom: calc(var(--espaco) * 3);
+}
+
+.dashboard-abas__lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espaco);
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+.dashboard-abas__aba {
+  padding: var(--espaco) calc(var(--espaco) * 2);
+  border: 0;
+  border-bottom: 3px solid transparent;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.dashboard-abas__aba[aria-selected="true"] {
+  border-bottom-color: currentColor;
+  font-weight: 700;
+}
+
+.dashboard-abas__painel {
+  padding-top: calc(var(--espaco) * 2);
+}
+
+.dashboard-abas__painel[hidden] {
+  display: none;
+}
+
+/* Chamados em foco */
+.dashboard-foco {
+  margin-bottom: calc(var(--espaco) * 3);
+}
+
+.dashboard-foco__titulo {
+  margin-top: 0;
+}
+
+.dashboard-foco__carregando {
+  margin: 0 0 var(--espaco);
+}
+
+.dashboard-foco__erro {
+  margin: 0 0 calc(var(--espaco) * 2);
+  padding: calc(var(--espaco) * 1.5);
+  border: 2px solid var(--cor-borda);
+  border-radius: 4px;
+}
+
+.dashboard-foco__erro p {
+  margin: 0 0 var(--espaco);
+}
+
+.dashboard-foco__vazio {
+  margin: 0 0 var(--espaco);
+  padding: calc(var(--espaco) * 1.5);
+  border: 2px dashed var(--cor-borda);
+  border-radius: 4px;
+}
+
+.dashboard-foco__lista {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco);
+  margin: 0 0 var(--espaco);
+  padding: 0;
+  list-style: none;
+}
+
+/* A borda lateral por prioridade é só reforço: a prioridade também sai em texto. */
+.dashboard-foco__item {
+  padding: calc(var(--espaco) * 1.5);
+  border: 2px solid var(--cor-borda);
+  border-left-width: 8px;
+  border-radius: 4px;
+}
+
+.dashboard-foco__item--p1 {
+  border-left-style: solid;
+  border-left-color: #8f1d1d;
+}
+
+.dashboard-foco__item--p2 {
+  border-left-style: double;
+  border-left-color: #8a5a00;
+}
+
+.dashboard-foco__item--p3 {
+  border-left-style: dashed;
+  border-left-color: #0b5cab;
+}
+
+.dashboard-foco__linha,
+.dashboard-foco__detalhe {
+  margin: 0 0 calc(var(--espaco) / 2);
+}
+
+.dashboard-foco__prioridade,
+.dashboard-foco__numero {
+  font-weight: 700;
+}
+
+.dashboard-foco__numero {
+  white-space: nowrap;
+}
+
+.dashboard-foco__status {
+  font-style: italic;
+}
+
+.dashboard-foco__modelo,
+.dashboard-foco__problema {
+  overflow-wrap: anywhere;
+}
+
+.dashboard-foco__idade {
+  white-space: nowrap;
+}
+
+.dashboard-foco__motivos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--espaco) / 2) var(--espaco);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.dashboard-foco__motivo {
+  padding: 0 var(--espaco);
+  border: 1px solid var(--cor-borda);
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.dashboard-foco__contagem {
+  margin: 0 0 var(--espaco);
+  font-size: 0.875rem;
+}
+
+.dashboard-foco__fila {
+  margin: 0;
+}

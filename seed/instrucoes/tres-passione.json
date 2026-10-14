@@ -1,0 +1,537 @@
+{
+  "_aviso": "TEXTO DE EXEMPLO EDITÁVEL. Substituir pelas instruções oficiais da 3corações (Q20). Vazamento interno não tem passos: escala por risco (Req 3.8).",
+  "modelo_id": "tres-passione",
+  "conteudo_exemplo": true,
+  "instrucoes": [
+    {
+      "modelo_id": "tres-passione",
+      "problema_id": 1,
+      "variante": "padrao",
+      "passos": [
+        {
+          "n": 1,
+          "texto": "Confira se o plugue está bem encaixado na tomada.",
+          "midia_url": "/midia/exemplo/passo-exemplo.svg",
+          "midia_tipo": "imagem",
+          "alt": "Mão encaixando o plugue da máquina na tomada da parede",
+          "texto_equivalente": "Passo 1: Confira se o plugue está bem encaixado na tomada. (mão encaixando o plugue da máquina na tomada da parede)."
+        },
+        {
+          "n": 2,
+          "texto": "Teste a tomada ligando outro aparelho nela.",
+          "midia_url": "/midia/exemplo/passo-exemplo.svg",
+          "midia_tipo": "imagem",
+          "alt": "Aparelho ligado em uma tomada para testar se há energia",
+          "texto_equivalente": "Passo 2: Teste a tomada ligando outro aparelho nela. (aparelho ligado em uma tomada para testar se há energia)."
+        },
+        {
+          "n": 3,
+          "texto": "Veja se a máquina está com o interruptor na posição ligado.",
+          "midia_url": "/midia/exemplo/passo-exemplo.svg",
+          "midia_tipo": "imagem",
+          "alt": "Dedo apertando o interruptor de ligar da máquina",
+          "texto_equivalente": "Passo 3: Veja se a máquina está com o interruptor na posição ligado. (dedo apertando o interruptor de ligar da máquina)."
+        },
+        {
+          "n": 4,
+          "texto": "Espere 1 minuto e aperte o botão de ligar de novo.",
+          "midia_url": "/midia/exemplo/passo-exemplo.svg",
+          "midia_tipo": "imagem",
+          "alt": "Relógio marcando 1 minuto ao lado do botão de ligar",
+          "texto_equivalente": "Passo 4: Espere 1 minuto e aperte o botão de ligar de novo. (relógio marcando 1 minuto ao lado do botão de ligar)."
+        }
+      ]
+    },
+    {
+      "modelo_id": "tres-passione",
+      "problema_id": 2,
+      "variante": "padrao",
+      "passos": [
+        {
+          "n": 1,
+          "texto": "Desligue a máquina e espere 1 minuto.",
+          "midia_url": "/midia/exemplo/passo-exemplo.svg",
+          "midia_tipo": "imagem",
+          "alt": "Máquina desligada da tomada com um relógio ao lado",
+          "texto_equivalente": "Passo 1: Desligue a máquina e espere 1 minuto. (máquina desligada da tomada com um relógio ao lado)."
+        },
+        {
+          "n": 2,
+          "texto": "Confira se o reservatório está bem encaixado e com água até a marca.",
+          "midia_url": "/midia/exemplo/passo-exemplo.svg",
+          "midia_tipo": "imagem",
+          "alt": "Reservatório encaixado com água até a marca de nível",
+          "texto_equivalente": "Passo 2: Confira se o reservatório está bem encaixado e com água até a marca. (reservatório encaixado com água até a marca de nível)."
+        },
+        {
+          "n": 3,
+          "texto": "Abra a alavanca e veja se há cápsula presa dentro.",
+          "midia_url": "/midia/exemplo/passo-exemplo.svg",
+          "midia_tipo": "imagem",
+          "alt": "Alavanca aberta mostrando o compartimento da cápsula",
+          "texto_equivalente": "Passo 3: Abra a alavanca e veja se há cápsula presa dentro. (alavanca aberta mostrando o compartimento da cápsula)."
+        },
+        {
+          "n": 4,
+          "texto": "Ligue de novo e veja se a luz vermelha apagou.",
+          "midia_url": "/midia/exemplo/passo-exemplo.svg",
+          "midia_tipo": "imagem",
+          "alt": "Máquina ligada com a luz vermelha apagada",
+          "texto_equivalente": "Passo 4: Ligue de novo e veja se a luz vermelha apagou. (máquina ligada com a luz vermelha apagada)."
+        }
+      ]
+    },
+    {
+      "modelo_id": "tres-passione",
+      "problema_id": 3,
+      "variante": "padrao",
+      "passos": [
+        {
+          "n": 1,
+          "texto": "Veja se há água no reservatório. Se faltar, encha até a marca.",
+          "midia_url": "/midia/exemplo/passo-exemplo.svg",
+          "midia_tipo": "imagem",
+          "alt": "Mão enchendo o reservatório com água até a marca",
+          "texto_equivalente": "Passo 1: Veja se há água no reservatório. Se faltar, encha até a marca. (mão enchendo o reservatório com água até a marca)."
+        },
+        {
+          "n": 2,
+          "texto": "Feche bem a alavanca, sem forçar.",
+          "midia_url": "/midia/exemplo/passo-exemplo.svg",
+          "midia_tipo": "imagem",
+          "alt": "Mão fechando a alavanca da máquina com suavidade",
+          "texto_equivalente": "Passo 2: Feche bem a alavanca, sem forçar. (mão fechando a alavanca da máquina com suavidade)."
+        },
+        {
+          "n": 3,
+          "texto": "Tire da tomada, espere 1 minuto e ligue de novo.",
+          "midia_url": "/midia/exemplo/passo-exemplo.svg",
+          "midia_tipo": "imagem",
+          "alt": "Plugue fora da tomada e um relógio marcando 1 minuto",
+          "texto_equivalente": "Passo 3: Tire da tomada, espere 1 minuto e ligue de novo. (plugue fora da tomada e um relógio marcando 1 minuto)."
+        }
+      ]
+    },
+    {
+      "modelo_id": "tres-passione",
+      "problema_id": 4,
+      "variante": "padrao",
+      "passos": [
+        {
+          "n": 1,
+          "texto": "Desligue a máquina e retire a cápsula do compartimento.",
+          "midia_url": "/midia/exemplo/passo-exemplo.svg",
+          "midia_tipo": "imagem",
+          "alt": "Mão retirando a cápsula do compartimento aberto",
+          "texto_equivalente": "Passo 1: Desligue a máquina e retire a cápsula do compartimento. (mão retirando a cápsula do compartimento aberto)."
+        },
+        {
+          "n": 2,
+          "texto": "Limpe com pano seco a região das teclas e do sensor.",
+          "midia_url": "/midia/exemplo/passo-exemplo.svg",
+          "midia_tipo": "imagem",
+          "alt": "Pano seco limpando as teclas das xícaras e o sensor",
+          "texto_equivalente": "Passo 2: Limpe com pano seco a região das teclas e do sensor. (pano seco limpando as teclas das xícaras e o sensor)."
+        },
+        {
+          "n": 3,
+          "texto": "Feche a alavanca até ouvir o clique.",
+          "midia_url": "/midia/exemplo/passo-exemplo.svg",
+          "midia_tipo": "imagem",
+          "alt": "Alavanca sendo fechada até a posição travada",
+          "texto_equivalente": "Passo 3: Feche a alavanca até ouvir o clique. (alavanca sendo fechada até a posição travada)."
+        },
+        {
+          "n": 4,
+          "texto": "Ligue a máquina e espere as luzes pararem de piscar.",
+          "midia_url": "/midia/exemplo/passo-exemplo.svg",
+          "midia_tipo": "imagem",
+          "alt": "Máquina ligada com as teclas acesas sem piscar",
+          "texto_equivalente": "Passo 4: Ligue a máquina e espere as luzes pararem de piscar. (máquina ligada com as teclas acesas sem piscar)."
+        }
+      ]
+    },
+    {
+      "modelo_id": "tres-passione",
+      "problema_id": 5,
+      "variante": "padrao",
+      "passos": [
+        {
+          "n": 1,
+          "texto": "A luz amarela avisa que a máquina precisa de limpeza.",
+          "midia_url": "/midia/exemplo/passo-exemplo.svg",
+          "midia_tipo": "imagem",
+          "alt": "Luz amarela acesa no painel da máquina",
+          "texto_equivalente": "Passo 1: A luz amarela avisa que a máquina precisa de limpeza. (luz amarela acesa no painel da máquina)."
+        },
+        {
+          "n": 2,
+          "texto": "Esvazie e lave o reservatório com água corrente.",
+          "midia_url": "/midia/exemplo/passo-exemplo.svg",
+          "midia_tipo": "imagem",
+          "alt": "Reservatório sendo lavado sob uma torneira",
+          "texto_equivalente": "Passo 2: Esvazie e lave o reservatório com água corrente. (reservatório sendo lavado sob uma torneira)."
+        },
+        {
+          "n": 3,
+          "texto": "Limpe o bico e a bandeja com um pano úmido.",
+          "midia_url": "/midia/exemplo/passo-exemplo.svg",
+          "midia_tipo": "imagem",
+          "alt": "Pano úmido limpando o bico e a bandeja de gotas",
+          "texto_equivalente": "Passo 3: Limpe o bico e a bandeja com um pano úmido. (pano úmido limpando o bico e a bandeja de gotas)."
+        },
+        {
+          "n": 4,
+          "texto": "Ligue e prepare uma bebida só com água para enxaguar.",
+          "midia_url": "/midia/exemplo/passo-exemplo.svg",
+          "midia_tipo": "imagem",
+          "alt": "Xícara recebendo apenas água quente do bico",
+          "texto_equivalente": "Passo 4: Ligue e prepare uma bebida só com água para enxaguar. (xícara recebendo apenas água quente do bico)."
+        }
+      ]
+    },
+    {
+      "modelo_id": "tres-passione",
+      "problema_id": 6,
+      "variante": "padrao",
+      "passos": [
+        {
+          "n": 1,
+          "texto": "Confira se o reservatório tem água.",
+          "midia_url": "/midia/exemplo/passo-exemplo.svg",
+          "midia_tipo": "imagem",
+          "alt": "Reservatório com nível de água visível",
+          "texto_equivalente": "Passo 1: Confira se o reservatório tem água. (reservatório com nível de água visível)."
+        },
+        {
+          "n": 2,
+          "texto": "Veja se a cápsula é compatível e está bem posicionada.",
+          "midia_url": "/midia/exemplo/passo-exemplo.svg",
+          "midia_tipo": "imagem",
+          "alt": "Cápsula encaixada corretamente no compartimento",
+          "texto_equivalente": "Passo 2: Veja se a cápsula é compatível e está bem posicionada. (cápsula encaixada corretamente no compartimento)."
+        },
+        {
+          "n": 3,
+          "texto": "Feche a alavanca e aperte a tecla da bebida de novo.",
+          "midia_url": "/midia/exemplo/passo-exemplo.svg",
+          "midia_tipo": "imagem",
+          "alt": "Dedo apertando a tecla da xícara com a alavanca fechada",
+          "texto_equivalente": "Passo 3: Feche a alavanca e aperte a tecla da bebida de novo. (dedo apertando a tecla da xícara com a alavanca fechada)."
+        },
+        {
+          "n": 4,
+          "texto": "Se não sair nada, troque a cápsula e limpe o bico.",
+          "midia_url": "/midia/exemplo/passo-exemplo.svg",
+          "midia_tipo": "imagem",
+          "alt": "Cápsula nova ao lado do bico sendo limpo",
+          "texto_equivalente": "Passo 4: Se não sair nada, troque a cápsula e limpe o bico. (cápsula nova ao lado do bico sendo limpo)."
+        }
+      ]
+    },
+    {
+      "modelo_id": "tres-passione",
+      "problema_id": 7,
+      "variante": "padrao",
+      "passos": [
+        {
+          "n": 1,
+          "texto": "Use a cápsula certa para o tamanho da xícara escolhida.",
+          "midia_url": "/midia/exemplo/passo-exemplo.svg",
+          "midia_tipo": "imagem",
+          "alt": "Cápsulas de tamanhos diferentes ao lado de duas xícaras",
+          "texto_equivalente": "Passo 1: Use a cápsula certa para o tamanho da xícara escolhida. (cápsulas de tamanhos diferentes ao lado de duas xícaras)."
+        },
+        {
+          "n": 2,
+          "texto": "Aperte a tecla da xícara menor para uma bebida mais encorpada.",
+          "midia_url": "/midia/exemplo/passo-exemplo.svg",
+          "midia_tipo": "imagem",
+          "alt": "Dedo apertando a tecla da xícara pequena",
+          "texto_equivalente": "Passo 2: Aperte a tecla da xícara menor para uma bebida mais encorpada. (dedo apertando a tecla da xícara pequena)."
+        },
+        {
+          "n": 3,
+          "texto": "Confira se a cápsula não foi usada antes.",
+          "midia_url": "/midia/exemplo/passo-exemplo.svg",
+          "midia_tipo": "imagem",
+          "alt": "Cápsula nova e cápsula usada lado a lado",
+          "texto_equivalente": "Passo 3: Confira se a cápsula não foi usada antes. (cápsula nova e cápsula usada lado a lado)."
+        },
+        {
+          "n": 4,
+          "texto": "Limpe o bico e prepare outra bebida.",
+          "midia_url": "/midia/exemplo/passo-exemplo.svg",
+          "midia_tipo": "imagem",
+          "alt": "Pano limpando o bico e xícara pronta para a nova bebida",
+          "texto_equivalente": "Passo 4: Limpe o bico e prepare outra bebida. (pano limpando o bico e xícara pronta para a nova bebida)."
+        }
+      ]
+    },
+    {
+      "modelo_id": "tres-passione",
+      "problema_id": 8,
+      "variante": "padrao",
+      "passos": [
+        {
+          "n": 1,
+          "texto": "Ligue a máquina e espere 2 minutos para aquecer.",
+          "midia_url": "/midia/exemplo/passo-exemplo.svg",
+          "midia_tipo": "imagem",
+          "alt": "Máquina ligada com relógio marcando 2 minutos",
+          "texto_equivalente": "Passo 1: Ligue a máquina e espere 2 minutos para aquecer. (máquina ligada com relógio marcando 2 minutos)."
+        },
+        {
+          "n": 2,
+          "texto": "Espere a luz indicar que a máquina está pronta.",
+          "midia_url": "/midia/exemplo/passo-exemplo.svg",
+          "midia_tipo": "imagem",
+          "alt": "Luz de pronto acesa no painel da máquina",
+          "texto_equivalente": "Passo 2: Espere a luz indicar que a máquina está pronta. (luz de pronto acesa no painel da máquina)."
+        },
+        {
+          "n": 3,
+          "texto": "Aqueça a xícara com água quente antes de servir.",
+          "midia_url": "/midia/exemplo/passo-exemplo.svg",
+          "midia_tipo": "imagem",
+          "alt": "Xícara recebendo água quente antes da bebida",
+          "texto_equivalente": "Passo 3: Aqueça a xícara com água quente antes de servir. (xícara recebendo água quente antes da bebida)."
+        },
+        {
+          "n": 4,
+          "texto": "Prepare outra bebida e compare a temperatura.",
+          "midia_url": "/midia/exemplo/passo-exemplo.svg",
+          "midia_tipo": "imagem",
+          "alt": "Duas xícaras lado a lado com bebida servida",
+          "texto_equivalente": "Passo 4: Prepare outra bebida e compare a temperatura. (duas xícaras lado a lado com bebida servida)."
+        }
+      ]
+    },
+    {
+      "modelo_id": "tres-passione",
+      "problema_id": 9,
+      "variante": "padrao",
+      "passos": [
+        {
+          "n": 1,
+          "texto": "Tire a máquina da tomada.",
+          "midia_url": "/midia/exemplo/passo-exemplo.svg",
+          "midia_tipo": "imagem",
+          "alt": "Mão puxando o plugue da tomada",
+          "texto_equivalente": "Passo 1: Tire a máquina da tomada. (mão puxando o plugue da tomada)."
+        },
+        {
+          "n": 2,
+          "texto": "Espere 1 minuto para ela esfriar.",
+          "midia_url": "/midia/exemplo/passo-exemplo.svg",
+          "midia_tipo": "imagem",
+          "alt": "Relógio marcando 1 minuto ao lado da máquina",
+          "texto_equivalente": "Passo 2: Espere 1 minuto para ela esfriar. (relógio marcando 1 minuto ao lado da máquina)."
+        },
+        {
+          "n": 3,
+          "texto": "Procure cápsula presa sob a alavanca, sem objetos pontiagudos.",
+          "midia_url": "/midia/exemplo/passo-exemplo.svg",
+          "midia_tipo": "imagem",
+          "alt": "Olhar para dentro do compartimento sob a alavanca",
+          "texto_equivalente": "Passo 3: Procure cápsula presa sob a alavanca, sem objetos pontiagudos. (olhar para dentro do compartimento sob a alavanca)."
+        },
+        {
+          "n": 4,
+          "texto": "Abra a alavanca com calma. Não force.",
+          "midia_url": "/midia/exemplo/passo-exemplo.svg",
+          "midia_tipo": "imagem",
+          "alt": "Mão abrindo a alavanca devagar",
+          "texto_equivalente": "Passo 4: Abra a alavanca com calma. Não force. (mão abrindo a alavanca devagar)."
+        }
+      ]
+    },
+    {
+      "modelo_id": "tres-passione",
+      "problema_id": 10,
+      "variante": "padrao",
+      "passos": [
+        {
+          "n": 1,
+          "texto": "Tire a máquina da tomada e seque o local com um pano.",
+          "midia_url": "/midia/exemplo/passo-exemplo.svg",
+          "midia_tipo": "imagem",
+          "alt": "Pano secando a bancada ao redor da máquina",
+          "texto_equivalente": "Passo 1: Tire a máquina da tomada e seque o local com um pano. (pano secando a bancada ao redor da máquina)."
+        },
+        {
+          "n": 2,
+          "texto": "Confira se o reservatório está bem encaixado.",
+          "midia_url": "/midia/exemplo/passo-exemplo.svg",
+          "midia_tipo": "imagem",
+          "alt": "Reservatório encaixado até o fundo",
+          "texto_equivalente": "Passo 2: Confira se o reservatório está bem encaixado. (reservatório encaixado até o fundo)."
+        },
+        {
+          "n": 3,
+          "texto": "Veja se a bandeja de gotas está no lugar e não está cheia.",
+          "midia_url": "/midia/exemplo/passo-exemplo.svg",
+          "midia_tipo": "imagem",
+          "alt": "Bandeja de gotas encaixada abaixo do bico",
+          "texto_equivalente": "Passo 3: Veja se a bandeja de gotas está no lugar e não está cheia. (bandeja de gotas encaixada abaixo do bico)."
+        },
+        {
+          "n": 4,
+          "texto": "Ligue de novo e observe se a água continua escapando.",
+          "midia_url": "/midia/exemplo/passo-exemplo.svg",
+          "midia_tipo": "imagem",
+          "alt": "Máquina ligada com o olhar atento à base",
+          "texto_equivalente": "Passo 4: Ligue de novo e observe se a água continua escapando. (máquina ligada com o olhar atento à base)."
+        }
+      ]
+    },
+    {
+      "modelo_id": "tres-passione",
+      "problema_id": 11,
+      "variante": "padrao",
+      "passos": [
+        {
+          "n": 1,
+          "texto": "Retire o reservatório e encha com água limpa até a marca.",
+          "midia_url": "/midia/exemplo/passo-exemplo.svg",
+          "midia_tipo": "imagem",
+          "alt": "Reservatório sendo cheio até a marca de nível",
+          "texto_equivalente": "Passo 1: Retire o reservatório e encha com água limpa até a marca. (reservatório sendo cheio até a marca de nível)."
+        },
+        {
+          "n": 2,
+          "texto": "Encaixe o reservatório até o fundo.",
+          "midia_url": "/midia/exemplo/passo-exemplo.svg",
+          "midia_tipo": "imagem",
+          "alt": "Reservatório sendo encaixado na lateral da máquina",
+          "texto_equivalente": "Passo 2: Encaixe o reservatório até o fundo. (reservatório sendo encaixado na lateral da máquina)."
+        },
+        {
+          "n": 3,
+          "texto": "Prepare uma bebida sem cápsula para a água circular.",
+          "midia_url": "/midia/exemplo/passo-exemplo.svg",
+          "midia_tipo": "imagem",
+          "alt": "Xícara no lugar com a alavanca fechada sem cápsula",
+          "texto_equivalente": "Passo 3: Prepare uma bebida sem cápsula para a água circular. (xícara no lugar com a alavanca fechada sem cápsula)."
+        },
+        {
+          "n": 4,
+          "texto": "Veja se a água sai pelo bico.",
+          "midia_url": "/midia/exemplo/passo-exemplo.svg",
+          "midia_tipo": "imagem",
+          "alt": "Água saindo pelo bico para dentro da xícara",
+          "texto_equivalente": "Passo 4: Veja se a água sai pelo bico. (água saindo pelo bico para dentro da xícara)."
+        }
+      ]
+    },
+    {
+      "modelo_id": "tres-passione",
+      "problema_id": 12,
+      "variante": "padrao",
+      "passos": [
+        {
+          "n": 1,
+          "texto": "Tire a máquina da tomada e espere esfriar.",
+          "midia_url": "/midia/exemplo/passo-exemplo.svg",
+          "midia_tipo": "imagem",
+          "alt": "Máquina desligada da tomada esfriando",
+          "texto_equivalente": "Passo 1: Tire a máquina da tomada e espere esfriar. (máquina desligada da tomada esfriando)."
+        },
+        {
+          "n": 2,
+          "texto": "Limpe o bico com um pano úmido ou uma escova macia.",
+          "midia_url": "/midia/exemplo/passo-exemplo.svg",
+          "midia_tipo": "imagem",
+          "alt": "Escova macia limpando o bico da máquina",
+          "texto_equivalente": "Passo 2: Limpe o bico com um pano úmido ou uma escova macia. (escova macia limpando o bico da máquina)."
+        },
+        {
+          "n": 3,
+          "texto": "Ligue e prepare uma bebida sem cápsula para enxaguar.",
+          "midia_url": "/midia/exemplo/passo-exemplo.svg",
+          "midia_tipo": "imagem",
+          "alt": "Água saindo livre pelo bico limpo",
+          "texto_equivalente": "Passo 3: Ligue e prepare uma bebida sem cápsula para enxaguar. (água saindo livre pelo bico limpo)."
+        }
+      ]
+    },
+    {
+      "modelo_id": "tres-passione",
+      "problema_id": 13,
+      "variante": "padrao",
+      "passos": [
+        {
+          "n": 1,
+          "texto": "Retire a cápsula e veja se não há outra presa dentro.",
+          "midia_url": "/midia/exemplo/passo-exemplo.svg",
+          "midia_tipo": "imagem",
+          "alt": "Compartimento aberto sem nenhuma cápsula dentro",
+          "texto_equivalente": "Passo 1: Retire a cápsula e veja se não há outra presa dentro. (compartimento aberto sem nenhuma cápsula dentro)."
+        },
+        {
+          "n": 2,
+          "texto": "Confira se a cápsula é compatível com a máquina.",
+          "midia_url": "/midia/exemplo/passo-exemplo.svg",
+          "midia_tipo": "imagem",
+          "alt": "Cápsula TRES ao lado do compartimento",
+          "texto_equivalente": "Passo 2: Confira se a cápsula é compatível com a máquina. (cápsula tres ao lado do compartimento)."
+        },
+        {
+          "n": 3,
+          "texto": "Encaixe a cápsula reta, sem inclinar.",
+          "midia_url": "/midia/exemplo/passo-exemplo.svg",
+          "midia_tipo": "imagem",
+          "alt": "Cápsula posicionada reta no compartimento",
+          "texto_equivalente": "Passo 3: Encaixe a cápsula reta, sem inclinar. (cápsula posicionada reta no compartimento)."
+        },
+        {
+          "n": 4,
+          "texto": "Feche a alavanca com firmeza, sem forçar.",
+          "midia_url": "/midia/exemplo/passo-exemplo.svg",
+          "midia_tipo": "imagem",
+          "alt": "Mão fechando a alavanca sobre a cápsula",
+          "texto_equivalente": "Passo 4: Feche a alavanca com firmeza, sem forçar. (mão fechando a alavanca sobre a cápsula)."
+        }
+      ]
+    },
+    {
+      "modelo_id": "tres-passione",
+      "problema_id": 10,
+      "variante": "externo",
+      "passos": [
+        {
+          "n": 1,
+          "texto": "Tire a máquina da tomada e seque o local com um pano.",
+          "midia_url": "/midia/exemplo/passo-exemplo.svg",
+          "midia_tipo": "imagem",
+          "alt": "Pano secando a bancada ao redor da máquina",
+          "texto_equivalente": "Passo 1: Tire a máquina da tomada e seque o local com um pano. (pano secando a bancada ao redor da máquina)."
+        },
+        {
+          "n": 2,
+          "texto": "Confira se o reservatório está bem encaixado.",
+          "midia_url": "/midia/exemplo/passo-exemplo.svg",
+          "midia_tipo": "imagem",
+          "alt": "Reservatório encaixado até o fundo",
+          "texto_equivalente": "Passo 2: Confira se o reservatório está bem encaixado. (reservatório encaixado até o fundo)."
+        },
+        {
+          "n": 3,
+          "texto": "Veja se a bandeja de gotas está no lugar e não está cheia.",
+          "midia_url": "/midia/exemplo/passo-exemplo.svg",
+          "midia_tipo": "imagem",
+          "alt": "Bandeja de gotas encaixada abaixo do bico",
+          "texto_equivalente": "Passo 3: Veja se a bandeja de gotas está no lugar e não está cheia. (bandeja de gotas encaixada abaixo do bico)."
+        },
+        {
+          "n": 4,
+          "texto": "Ligue de novo e observe se a água continua escapando.",
+          "midia_url": "/midia/exemplo/passo-exemplo.svg",
+          "midia_tipo": "imagem",
+          "alt": "Máquina ligada com o olhar atento à base",
+          "texto_equivalente": "Passo 4: Ligue de novo e observe se a água continua escapando. (máquina ligada com o olhar atento à base)."
+        }
+      ]
+    }
+  ]
+}

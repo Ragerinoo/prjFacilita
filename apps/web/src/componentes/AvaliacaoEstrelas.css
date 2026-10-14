@@ -1,0 +1,38 @@
+/* Avaliação de 1 a 5 estrelas: usada na Instrução e no acompanhamento do Chamado. */
+.avaliacao fieldset {
+  margin: 0 0 calc(var(--espaco) * 2);
+  padding: 0;
+  border: 0;
+}
+
+.avaliacao__estrela {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--espaco);
+  min-height: 44px;
+  padding-right: var(--espaco);
+}
+
+.avaliacao__comentario {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco);
+  margin-bottom: calc(var(--espaco) * 2);
+}
+
+.avaliacao textarea {
+  min-height: 6rem;
+  padding: var(--espaco);
+  font-family: inherit;
+}
+.avaliacao .instrucao__aviso {
+  padding: var(--espaco) calc(var(--espaco) * 2);
+  border: 2px solid var(--cor-borda);
+  border-radius: 4px;
+}
+.avaliacao .instrucao__acao {
+  width: 100%;
+  min-height: 56px;
+  text-align: center;
+}

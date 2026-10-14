@@ -1,0 +1,72 @@
+/* Pagina_Maquina: identificação, os 13 problemas e a opção "não sei qual é" (mobile-first). */
+.maquina__identificacao {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--espaco) * 2);
+}
+
+.maquina__foto {
+  width: 5rem;
+  height: 5rem;
+  object-fit: contain;
+}
+
+.maquina__aviso {
+  padding: var(--espaco) calc(var(--espaco) * 2);
+  border: 2px solid var(--cor-borda);
+  border-radius: 4px;
+}
+
+.problemas {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--espaco);
+  margin: 0 0 calc(var(--espaco) * 2);
+  padding: 0;
+  list-style: none;
+}
+
+.problema {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--espaco) * 2);
+  width: 100%;
+  min-height: 56px;
+  padding: var(--espaco) calc(var(--espaco) * 2);
+  border: 2px solid var(--cor-borda);
+  border-radius: 4px;
+  font-family: inherit;
+  text-align: left;
+  color: var(--cor-texto);
+  background: var(--cor-fundo);
+  cursor: pointer;
+}
+
+.problema__titulo {
+  flex: 1;
+  font-weight: 700;
+}
+
+.icone-problema {
+  flex: none;
+  color: var(--cor-texto);
+}
+
+.maquina__outro {
+  width: 100%;
+  min-height: 56px;
+  text-align: center;
+}
+
+.maquina__assistente {
+  margin-top: calc(var(--espaco) * 2);
+  padding: var(--espaco) calc(var(--espaco) * 2);
+  border: 2px solid var(--cor-borda);
+  border-radius: 4px;
+}
+
+@media (min-width: 40rem) {
+  .problemas {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
