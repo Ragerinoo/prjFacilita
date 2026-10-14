@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resolva sozinho | Central de Ajuda TRES</title>
+  <meta name="description" content="Escolha sua máquina TRES, encontre o problema e resolva em poucos passos, sem precisar ligar.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="topo">
+    <div class="container topo__linha">
+      <a class="marca" href="#/" aria-label="TRES Central de Ajuda, voltar ao início">
+        <span class="marca__logo" aria-hidden="true">TRES</span>
+        <span class="marca__texto">Central de Ajuda</span>
+      </a>
+      <a class="topo__contato" href="#/contato">Falar com a gente</a>
+    </div>
+  </header>
+
+  <nav class="etapas" aria-label="Etapas da ajuda">
+    <ol class="container etapas__lista" id="etapas">
+      <li data-etapa="1"><span class="etapas__num">1</span><span class="etapas__nome">Sua máquina</span></li>
+      <li data-etapa="2"><span class="etapas__num">2</span><span class="etapas__nome">O problema</span></li>
+      <li data-etapa="3"><span class="etapas__num">3</span><span class="etapas__nome">A solução</span></li>
+    </ol>
+  </nav>
+
+  <main id="conteudo" class="container" tabindex="-1">
+
+    <div id="anuncio" class="sr-only" role="status" aria-live="polite"></div>
+
+    <!-- ETAPA 1: modelo -->
+    <section id="view-modelo" class="view" hidden aria-labelledby="titulo-modelo">
+      <div class="hero">
+        <p class="hero__sobre">Autoatendimento TRES</p>
+        <h1 id="titulo-modelo">Sua máquina deu um sinal estranho? Vamos resolver juntos.</h1>
+        <p class="hero__texto">Em geral, é só uma limpeza ou um ajuste simples. Em poucos passos você descobre o que fazer, sem precisar ligar.</p>
+      </div>
+
+      <h2 class="secao-titulo">Qual é a sua máquina?</h2>
+      <ul class="modelos" id="lista-modelos"></ul>
+
+      <div class="ajuda-modelo">
+        <button type="button" class="link-btn" id="btn-nao-sei" aria-expanded="false" aria-controls="dica-modelo">Não sei qual é a minha</button>
+        <div id="dica-modelo" class="dica" hidden>
+          <p>Procure o nome do modelo (LOV, Modo, Passione, Luna ou Touch) na própria máquina, na caixa ou no guia rápido que veio com ela.</p>
+          <p>Sem achar? Tudo bem: os passos de solução funcionam para todas as máquinas. Você só não verá as dicas específicas do seu modelo.</p>
+          <button type="button" class="btn btn--sec" id="btn-pular-modelo">Continuar sem escolher</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ETAPA 2: problema -->
+    <section id="view-problema" class="view" hidden aria-labelledby="titulo-problema">
+      <button type="button" class="voltar" data-voltar="#/">← Trocar de máquina</button>
+      <h1 id="titulo-problema">O que está acontecendo?</h1>
+      <p class="sub" id="sub-problema"></p>
+      <div class="maquina-escolhida" id="maquina-escolhida" hidden></div>
+
+      <div class="busca">
+        <label for="campo-busca" class="busca__rotulo">Buscar pelo que você está vendo</label>
+        <input id="campo-busca" type="search" placeholder="Ex.: café não sai, luz vermelha, vazando" autocomplete="off">
+      </div>
+
+      <div class="filtros" id="filtros" role="group" aria-label="Filtrar por tipo de problema"></div>
+
+      <p class="status" id="status-busca" role="status" aria-live="polite"></p>
+
+      <section id="bloco-comuns" aria-labelledby="titulo-comuns">
+        <h2 class="secao-titulo" id="titulo-comuns">Mais comuns</h2>
+        <ul class="problemas" id="lista-comuns"></ul>
+      </section>
+
+      <section id="bloco-outros" aria-labelledby="titulo-outros">
+        <h2 class="secao-titulo" id="titulo-outros">Outros problemas</h2>
+        <ul class="problemas" id="lista-outros"></ul>
+      </section>
+
+      <p class="vazio" id="vazio" hidden>
+        Não encontramos esse problema. Tente outras palavras ou limpe a busca para ver todos.
+        <button type="button" class="btn btn--sec" id="btn-limpar-busca">Limpar busca</button>
+      </p>
+
+      <div id="cuidados-problema"></div>
+    </section>
+
+    <!-- ETAPA 3: solução -->
+    <section id="view-solucao" class="view" hidden aria-labelledby="titulo-solucao">
+      <button type="button" class="voltar" data-voltar="#/problemas">← Escolher outro problema</button>
+      <p class="etiqueta" id="solucao-modelo"></p>
+      <h1 id="titulo-solucao" tabindex="-1"></h1>
+
+      <div class="passo-progresso" aria-hidden="true">
+        <div class="passo-progresso__barra"><span id="barra-passo"></span></div>
+      </div>
+      <p class="passo-contagem" id="contagem-passo"></p>
+
+      <div class="passo" id="passo" aria-live="polite"></div>
+
+      <figure class="visual3d" id="visual3d" hidden>
+        <div class="visual3d__palco" id="visual3d-palco"></div>
+        <figcaption>
+          <strong id="legenda-3d"></strong>
+          <span class="visual3d__nota">Ilustração 3D aproximada da Touch. Arraste para girar.</span>
+        </figcaption>
+      </figure>
+
+      <div class="passo-acoes">
+        <button type="button" class="btn btn--sec" id="btn-anterior">Anterior</button>
+        <button type="button" class="btn" id="btn-proximo">Próximo</button>
+      </div>
+
+      <p class="obs" id="obs-solucao" hidden></p>
+    </section>
+
+    <!-- Confirmação final: resolveu? -->
+    <section id="view-confirma" class="view" hidden aria-labelledby="titulo-confirma">
+      <p class="etiqueta">Última etapa</p>
+      <h1 id="titulo-confirma" tabindex="-1">O problema foi solucionado?</h1>
+      <p class="sub" id="confirma-problema"></p>
+      <div class="confirma">
+        <button type="button" class="btn btn--grande btn--ok" id="btn-sim">Sim, resolvi</button>
+        <button type="button" class="btn btn--grande btn--sec" id="btn-nao">Não, ainda não</button>
+      </div>
+      <button type="button" class="link-btn" id="btn-rever">Rever os passos</button>
+    </section>
+
+    <!-- Desfecho: resolvido -->
+    <section id="view-resolvido" class="view" hidden aria-labelledby="titulo-resolvido">
+      <div class="desfecho desfecho--ok">
+        <p class="desfecho__icone" aria-hidden="true">✅</p>
+        <h1 id="titulo-resolvido" tabindex="-1">Que bom! Seu café está de volta.</h1>
+        <p>Você resolveu sem precisar ligar. Obrigado por usar o autoatendimento TRES.</p>
+      </div>
+
+      <div class="avaliacao" role="group" aria-labelledby="titulo-aval">
+        <h2 id="titulo-aval" class="secao-titulo">Como foi a ajuda?</h2>
+        <div class="estrelas" id="estrelas"></div>
+        <p class="status" id="status-aval" role="status" aria-live="polite"></p>
+
+        <form id="form-feedback" class="feedback" novalidate hidden>
+          <div class="campo" data-campo="comentario">
+            <label for="f-comentario" class="campo__rotulo">
+              <span data-texto-feedback="rotulo"></span>
+              <span class="campo__obrig" data-texto-feedback="opcional"></span>
+            </label>
+            <textarea id="f-comentario" name="comentario" rows="4" maxlength="500" autocomplete="off"
+                      aria-describedby="f-comentario-aviso f-comentario-contador"></textarea>
+            <p class="campo__ajuda" id="f-comentario-aviso" data-texto-feedback="avisoNaoIdentificacao"></p>
+            <p class="campo__ajuda" id="f-comentario-contador"></p>
+            <p class="campo__erro" id="f-comentario-erro" hidden></p>
+          </div>
+
+          <button type="submit" class="btn" id="btn-enviar-comentario" data-texto-feedback="botaoEnviar"></button>
+
+          <div id="feedback-agradecimento" class="feedback__agradecimento" role="status" aria-live="polite" tabindex="-1"></div>
+          <div id="feedback-falha-area"></div>
+        </form>
+      </div>
+
+      <div id="cuidados-resolvido"></div>
+
+      <div class="passo-acoes">
+        <a class="btn btn--sec" href="#/problemas">Tenho outro problema</a>
+        <a class="btn" href="#/">Voltar ao início</a>
+      </div>
+    </section>
+
+    <!-- Desfecho: suporte (Tela de abertura de chamado) -->
+    <section id="view-suporte" class="view" hidden aria-labelledby="titulo-suporte">
+      <div class="desfecho desfecho--chamado">
+        <p class="desfecho__icone" aria-hidden="true">📝</p>
+        <h1 id="titulo-suporte" tabindex="-1" data-texto="tituloChamado"></h1>
+        <p data-texto="introChamado"></p>
+      </div>
+
+      <section class="cartao resumo resumo--recolhido" id="resumo-jornada" aria-labelledby="titulo-resumo">
+        <h2 id="titulo-resumo" data-texto="resumoTitulo"></h2>
+        <dl class="resumo__dados">
+          <div><dt data-texto="resumoRotuloModelo"></dt><dd id="resumo-modelo"></dd></div>
+          <div><dt data-texto="resumoRotuloProblema"></dt><dd id="resumo-problema"></dd></div>
+          <div><dt data-texto="resumoRotuloPassos"></dt><dd id="resumo-contagem"></dd></div>
+        </dl>
+        <button type="button" class="link-btn resumo__toggle" id="resumo-toggle"
+                aria-expanded="false" aria-controls="resumo-passos" data-texto="resumoVer"></button>
+        <div id="resumo-passos" class="resumo__passos">
+          <p class="resumo__legenda" data-texto="resumoLegendaPassos"></p>
+          <ol class="lista-simples" id="resumo-lista"></ol>
+          <p id="resumo-vazio" hidden data-texto="resumoSemPassos"></p>
+        </div>
+      </section>
+
+      <form id="form-chamado" class="form" novalidate aria-labelledby="titulo-form">
+        <h2 id="titulo-form" class="sr-only" data-texto="formTitulo"></h2>
+
+        <div class="campo" data-campo="nome">
+          <label for="c-nome" class="campo__rotulo"><span data-texto="rotuloNome"></span> <span class="campo__obrig" data-texto="obrigatorio"></span></label>
+          <input id="c-nome" name="nome" type="text" required maxlength="100" autocomplete="name" autocapitalize="words">
+          <p class="campo__erro" id="c-nome-erro" hidden></p>
+        </div>
+
+        <div class="campo" data-campo="email">
+          <label for="c-email" class="campo__rotulo"><span data-texto="rotuloEmail"></span> <span class="campo__obrig" data-texto="obrigatorio"></span></label>
+          <input id="c-email" name="email" type="email" required maxlength="254" autocomplete="email" autocapitalize="none" spellcheck="false">
+          <p class="campo__erro" id="c-email-erro" hidden></p>
+        </div>
+
+        <div class="campo" data-campo="telefone">
+          <label for="c-telefone" class="campo__rotulo"><span data-texto="rotuloTelefone"></span> <span class="campo__obrig" data-texto="obrigatorio"></span></label>
+          <input id="c-telefone" name="telefone" type="tel" inputmode="tel" required maxlength="20" autocomplete="tel" aria-describedby="c-telefone-ajuda">
+          <p class="campo__ajuda" id="c-telefone-ajuda" data-texto="ajudaTelefone"></p>
+          <p class="campo__erro" id="c-telefone-erro" hidden></p>
+        </div>
+
+        <div class="campo" data-campo="descricao">
+          <label for="c-descricao" class="campo__rotulo"><span data-texto="rotuloDescricao"></span> <span class="campo__obrig" data-texto="obrigatorio"></span></label>
+          <textarea id="c-descricao" name="descricao" required maxlength="500" rows="5" autocomplete="off" aria-describedby="c-descricao-contador"></textarea>
+          <p class="campo__ajuda" id="c-descricao-contador"></p>
+          <p class="campo__erro" id="c-descricao-erro" hidden></p>
+        </div>
+
+        <div class="envio">
+          <p class="envio__prazo" id="chamado-prazo-resumo"></p>
+          <p class="envio__privacidade" id="aviso-privacidade"></p>
+          <div class="aceite" data-campo="aceite">
+            <label class="aceite__rotulo" for="c-aceite">
+              <input id="c-aceite" name="aceite" type="checkbox" required>
+              <span><span data-texto="rotuloAceite"></span> <span class="campo__obrig" data-texto="obrigatorio"></span></span>
+            </label>
+            <p class="campo__erro" id="c-aceite-erro" hidden></p>
+          </div>
+          <button type="button" class="link-btn" id="btn-ler-termos" data-texto="botaoLerTermos"></button>
+          <p class="campo__ajuda" id="termos-msg" role="status" hidden></p>
+          <button type="submit" class="btn btn--grande" id="btn-abrir-chamado" data-texto="botaoAbrirChamado"></button>
+        </div>
+      </form>
+
+      <div id="chamado-falha-area"></div>
+
+      <div class="passo-acoes">
+        <button type="button" class="btn btn--sec" id="btn-rever-chamado" data-texto="botaoRever"></button>
+        <a class="btn btn--sec" href="#/problemas" data-texto="botaoEscolherOutro"></a>
+      </div>
+    </section>
+
+    <!-- Desfecho: chamado aberto (Tela de confirmação) -->
+    <section id="view-chamado" class="view" hidden aria-labelledby="titulo-chamado">
+      <div class="desfecho desfecho--ok">
+        <p class="desfecho__icone" aria-hidden="true">✅</p>
+        <h1 id="titulo-chamado" tabindex="-1" data-texto="tituloConfirmacao"></h1>
+        <p data-texto="confirmacaoRecebido"></p>
+      </div>
+
+      <div class="cartao protocolo">
+        <p class="protocolo__rotulo" data-texto="protocoloRotulo"></p>
+        <p class="protocolo__numero" id="chamado-protocolo"></p>
+      </div>
+
+      <p class="aviso aviso--prototipo" id="chamado-aviso-prototipo" hidden></p>
+
+      <div class="cartao retorno">
+        <p id="chamado-prazo"></p>
+        <p id="chamado-canais"></p>
+        <p data-texto="confirmacaoConferir"></p>
+        <dl class="dados-contato">
+          <div><dt data-texto="rotuloEmailConfirmacao"></dt><dd id="chamado-email"></dd></div>
+          <div><dt data-texto="rotuloTelefoneConfirmacao"></dt><dd id="chamado-telefone"></dd></div>
+        </dl>
+      </div>
+
+      <div class="avaliacao" role="group" aria-labelledby="titulo-aval-chamado">
+        <h2 id="titulo-aval-chamado" class="secao-titulo" data-texto="avaliacaoTitulo"></h2>
+        <div class="estrelas" id="estrelas-chamado"></div>
+        <p class="status" id="status-aval-chamado" role="status" aria-live="polite"></p>
+      </div>
+
+      <div class="passo-acoes">
+        <a class="btn btn--sec" href="#/problemas" data-texto="botaoOutroProblema"></a>
+        <a class="btn" href="#/" data-texto="botaoVoltarInicio"></a>
+      </div>
+    </section>
+
+    <!-- Contato direto (rodapé / cabeçalho) -->
+    <section id="view-contato" class="view" hidden aria-labelledby="titulo-contato">
+      <button type="button" class="voltar" data-voltar="#/">← Voltar</button>
+      <h1 id="titulo-contato" tabindex="-1">Falar com a gente</h1>
+      <p class="sub">Antes de ligar, vale tentar o passo a passo: a maioria dos casos se resolve em poucos minutos.</p>
+      <a class="btn btn--grande" href="#/problemas">Tentar resolver sozinho</a>
+      <div class="cartao-contato" id="cartao-contato-geral"></div>
+    </section>
+
+  </main>
+
+  <footer class="rodape">
+    <div class="container rodape__linha">
+      <p>Ainda precisa falar com alguém? <a href="#/contato">Veja os canais de atendimento</a>.</p>
+      <p>Mais vídeos e perguntas frequentes na <a id="link-central" href="https://www.escolhatres.com.br/central-de-ajuda/" target="_blank" rel="noopener noreferrer">Central de Ajuda<span class="sr-only"> (abre em nova aba)</span></a>.</p>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/chamado.js"></script>
+  <script src="js/feedback.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

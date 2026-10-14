@@ -1,0 +1,1012 @@
+{
+  "pbtResults": {
+    "8.2 Escrever o teste de propriedade da normalização do comentário": {
+      "status": "passed",
+      "lastRunTimestamp": 1792001129951
+    },
+    "8.3 Escrever o teste de propriedade da validação do comentário": {
+      "status": "passed",
+      "lastRunTimestamp": 1792001129999
+    },
+    "8.5 Escrever o teste de propriedade do conteúdo indisponível": {
+      "status": "passed",
+      "lastRunTimestamp": 1792001130513
+    },
+    "8.6 Escrever o teste de propriedade do conteúdo do Payload_do_Feedback": {
+      "status": "passed",
+      "lastRunTimestamp": 1792001144397
+    },
+    "8.7 Escrever o teste de propriedade da ida e volta do Payload em JSON": {
+      "status": "passed",
+      "lastRunTimestamp": 1792001144515
+    },
+    "8.8 Escrever o teste de propriedade da chave de idempotência": {
+      "status": "passed",
+      "lastRunTimestamp": 1792001144825
+    },
+    "8.9 Escrever o teste de propriedade da ida e volta pelo repositório": {
+      "status": "passed",
+      "lastRunTimestamp": 1792001168452
+    },
+    "8.10 Escrever o teste de propriedade da leitura tolerante do repositório": {
+      "status": "passed",
+      "lastRunTimestamp": 1792001168482
+    },
+    "8.11 Escrever o teste de propriedade do limite de 50 registros": {
+      "status": "passed",
+      "lastRunTimestamp": 1792001168798
+    },
+    "8.12 Escrever o teste de propriedade da idempotência por chave no repositório": {
+      "status": "passed",
+      "lastRunTimestamp": 1792001169459
+    },
+    "8.13 Escrever o teste de propriedade do armazenamento isolado": {
+      "status": "passed",
+      "lastRunTimestamp": 1792001170761
+    },
+    "8.14 Escrever o teste de propriedade da falha de armazenamento sem rastro": {
+      "status": "passed",
+      "lastRunTimestamp": 1792001170942
+    },
+    "8.18 Escrever o teste de propriedade da máquina de estados do envio": {
+      "status": "passed",
+      "lastRunTimestamp": 1792001189734
+    },
+    "8.15 Escrever o teste de propriedade da seleção do modo e do destino": {
+      "status": "passed",
+      "lastRunTimestamp": 1792001193181
+    },
+    "8.16 Escrever o teste de propriedade da requisição em Modo_API": {
+      "status": "passed",
+      "lastRunTimestamp": 1792001193247
+    },
+    "8.17 Escrever o teste de propriedade da classificação do resultado do envio": {
+      "status": "passed",
+      "lastRunTimestamp": 1792001193504
+    },
+    "8.20 Escrever o teste de propriedade do evento de métrica sem texto": {
+      "status": "passed",
+      "lastRunTimestamp": 1792001273098
+    },
+    "8.21 Escrever o teste de propriedade do resumo de métricas com comentários": {
+      "status": "passed",
+      "lastRunTimestamp": 1792001273389
+    }
+  },
+  "executionHistory": {
+    "1.1 Conferir a linha de base dos arquivos protegidos antes de qualquer alteração": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1791999616817
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1791999624266
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1791999742318
+      }
+    ],
+    "1.2 Acrescentar o objeto `FEEDBACK` em `js/data.js` e exportá-lo em `window.TRES_DATA`": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1791999616844
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1791999624312
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1791999742629
+      }
+    ],
+    "2.1 Fazer `resumirEventos` contar eventos `comentario`": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1791999616880
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1791999624961
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1791999743662
+      }
+    ],
+    "2.2 Exportar `formatarIsoComFuso` em `js/chamado.js`": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1791999616930
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1791999747825
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1791999846611
+      }
+    ],
+    "3.1 Criar o módulo UMD com fábrica `criar(base)`, constantes e funções de texto": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1791999616979
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1791999747959
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1791999846708
+      }
+    ],
+    "3.2 Implementar estado do formulário, payload e serialização": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1791999617004
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1791999851706
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792000051569
+      }
+    ],
+    "3.3 Implementar `modoDoFeedback` e o Ponto_de_Integracao_de_Feedback": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1791999617032
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792000055905
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792000134706
+      }
+    ],
+    "3.4 Implementar `eventoComentario`, `textosValidos` e fechar a API pública": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1791999617064
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792000137609
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792000242435
+      }
+    ],
+    "4.1 Incluir o script do núcleo do feedback": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1791999617087
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1791999748785
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1791999847052
+      }
+    ],
+    "4.2 Incluir o `#form-feedback` dentro de `#view-resolvido`": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1791999617122
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1791999852509
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792000051910
+      }
+    ],
+    "5.1 Acrescentar o token e o bloco \"Comentário opcional (Tela_de_Resolvido)\"": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1791999617168
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1791999749501
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1791999848056
+      }
+    ],
+    "5.2 Acrescentar o override do botão desabilitado só no bloco novo": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1791999617194
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1791999853166
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792000052740
+      }
+    ],
+    "6.1 Estado, utilitários e ajustes pontuais": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1791999617218
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792000247000
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792000305519
+      }
+    ],
+    "6.2 Estender `montarEstrelas` e zerar o estado ao escolher problema": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1791999617244
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792000305765
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792000340445
+      }
+    ],
+    "6.3 Implementar `aplicarTextosFeedback` e `renderFeedback` e ligar na rota `resolvido`": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1791999617269
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792000340508
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792000447377
+      }
+    ],
+    "6.4 Implementar `iniciarFeedback`, contador e validação do campo": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1791999617296
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792000447414
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792000548523
+      }
+    ],
+    "6.5 Implementar o envio: `pontoDeIntegracaoFeedback`, `aoEnviarFeedback` e `mostrarEnviado`": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1791999617321
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792000548546
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792000649599
+      }
+    ],
+    "6.6 Implementar `mostrarFalhaFeedback`, retentativa e saída da rota durante o envio": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1791999617349
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792000650355
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792000740485
+      }
+    ],
+    "7. Checkpoint - Telas integradas": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1791999617386
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792000745322
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792000922156
+      }
+    ],
+    "9. Checkpoint - Núcleo e testes": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1791999617429
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792001290191
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792001311490
+      }
+    ],
+    "11. Checkpoint - Testes de interface": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1791999617451
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792002199436
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792002448948
+      }
+    ],
+    "12.1 Registrar a funcionalidade no contexto do projeto": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1791999617479
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792002449482
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792002694134
+      }
+    ],
+    "13.1 Conferir arquivos protegidos e escopo dos arquivos": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1791999617505
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792002697951
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792002805735
+      }
+    ],
+    "13.2 Conferir que nenhum texto de comentário vai para métricas nem para o console": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1791999617533
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792002698561
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792002806531
+      }
+    ],
+    "13.3 Rodar a suíte completa em série": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1791999617560
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792002806984
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792002916163
+      }
+    ],
+    "13.4 Limpar temporários": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1791999617588
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792002916733
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792002944740
+      }
+    ],
+    "1. Linha de base e configuração/textos em `js/data.js`": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1791999742654
+      }
+    ],
+    "2. Mudanças aditivas em `js/chamado.js`": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1791999846659
+      }
+    ],
+    "4. Estrutura HTML em `index.html`": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792000051951
+      }
+    ],
+    "5. Estilos em `css/styles.css`": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792000052769
+      }
+    ],
+    "3. Implementar o núcleo sem DOM em `js/feedback.js`": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792000242475
+      }
+    ],
+    "6. Lógica de tela em `js/app.js`": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792000740516
+      }
+    ],
+    "8.1 Acrescentar os geradores do feedback em `tests/geradores.js`": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792000922250
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792001070778
+      }
+    ],
+    "8.23 Escrever os testes de exemplo sobre `TRES_DATA.FEEDBACK` em `tests/dados.test.js`": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792000922284
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792001070841
+      }
+    ],
+    "8.24 Atualizar `tests/nucleo/textos-metricas.test.js` para incluir `comentarios`": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792000922329
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792001070915
+      }
+    ],
+    "8.25 Atualizar `tests/smoke.test.js` para o `feedback.js`": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792000922883
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792001071346
+      }
+    ],
+    "8. Testes do núcleo em Node (somente desenvolvimento, fora do site)": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792001070879
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792001070976
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792001071046
+      }
+    ],
+    "8.2 Escrever o teste de propriedade da normalização do comentário": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792001072264
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792001209084
+      }
+    ],
+    "8.6 Escrever o teste de propriedade do conteúdo do Payload_do_Feedback": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792001072930
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792001210312
+      }
+    ],
+    "8.9 Escrever o teste de propriedade da ida e volta pelo repositório": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792001073740
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792001212712
+      }
+    ],
+    "8.15 Escrever o teste de propriedade da seleção do modo e do destino": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792001074517
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792001217761
+      }
+    ],
+    "8.18 Escrever o teste de propriedade da máquina de estados do envio": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792001075013
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792001220429
+      }
+    ],
+    "8.3 Escrever o teste de propriedade da validação do comentário": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792001209128
+      }
+    ],
+    "8.4 Escrever o teste de propriedade do limite e do contador": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792001209192
+      }
+    ],
+    "8.5 Escrever o teste de propriedade do conteúdo indisponível": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792001209512
+      }
+    ],
+    "8.7 Escrever o teste de propriedade da ida e volta do Payload em JSON": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792001211110
+      }
+    ],
+    "8.8 Escrever o teste de propriedade da chave de idempotência": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792001211912
+      }
+    ],
+    "8.10 Escrever o teste de propriedade da leitura tolerante do repositório": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792001213632
+      }
+    ],
+    "8.11 Escrever o teste de propriedade do limite de 50 registros": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792001214311
+      }
+    ],
+    "8.12 Escrever o teste de propriedade da idempotência por chave no repositório": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792001215299
+      }
+    ],
+    "8.13 Escrever o teste de propriedade do armazenamento isolado": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792001216025
+      }
+    ],
+    "8.14 Escrever o teste de propriedade da falha de armazenamento sem rastro": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792001216949
+      }
+    ],
+    "8.16 Escrever o teste de propriedade da requisição em Modo_API": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792001218558
+      }
+    ],
+    "8.17 Escrever o teste de propriedade da classificação do resultado do envio": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792001219383
+      }
+    ],
+    "8.19 Escrever o teste de propriedade do reinício por jornada": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792001221330
+      }
+    ],
+    "8.20 Escrever o teste de propriedade do evento de métrica sem texto": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792001222015
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792001288937
+      }
+    ],
+    "8.22 Escrever os testes de exemplo e de borda do núcleo (`tests/nucleo/feedback-exemplos.test.js`)": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792001222918
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792001289685
+      }
+    ],
+    "8.21 Escrever o teste de propriedade do resumo de métricas com comentários": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792001288996
+      }
+    ],
+    "10.1 Estender `tests/ui/servidor-teste.js` e `tests/ui/cenarios.js` para o feedback": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792001312443
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792001529566
+      }
+    ],
+    "10.2 Estender `tests/estatico.js` (e `tests/estatico.test.js`) para o feedback": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792001312962
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792001765128
+      }
+    ],
+    "10. Testes de interface e verificação estática (Edge headless, cenários curtos)": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792001529610
+      }
+    ],
+    "10.3 Criar `tests/ui/cenarios/24-comentario-resolvido.test.js`: fluxos principais (Modo_Prototipo)": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792001536825
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792001765095
+      }
+    ],
+    "10.6 Criar `tests/ui/cenarios/25-comentario-api.test.js` (Modo_API)": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792001537517
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792001766251
+      }
+    ],
+    "10.4 Continuar `24-comentario-resolvido.test.js`: validação, contador e limite": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792001765175
+      }
+    ],
+    "10.5 Continuar `24-comentario-resolvido.test.js`: falha, estrutura e conteúdo indisponível": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792001765229
+      }
+    ],
+    "10.7 Atualizar `22-regressao-rotas.test.js`": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792001767064
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792001938211
+      }
+    ],
+    "10.8 Atualizar `18-estrelas.test.js`": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792001767877
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792001938311
+      }
+    ],
+    "10.9 Atualizar `19-texto-literal.test.js`": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792001768949
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792001938344
+      }
+    ],
+    "10.10 Atualizar `20-responsivo.test.js`": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792001769748
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792002076228
+      }
+    ],
+    "10.11 Atualizar `21-movimento-reduzido.test.js`": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792001770344
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792001938379
+      }
+    ],
+    "10.12 Atualizar `23-dados-pessoais.test.js`": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792001947500
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792002076292
+      }
+    ],
+    "10.13 Atualizar `16-duplo-toque.test.js`": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792001948208
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792002077033
+      }
+    ],
+    "10.14 Atualizar `17-navegacao.test.js`": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792001949031
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792002077922
+      }
+    ],
+    "10.15 Atualizar `15-modo-api.test.js`": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792001949634
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792002078628
+      }
+    ],
+    "10.16 Acrescentar a seção do comentário em `tests/ui/roteiro-manual.md`": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792002079699
+      },
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792002199407
+      }
+    ],
+    "12. Atualizar o `CONTEXTO-PROJETO.md`": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792002694194
+      }
+    ],
+    "13. Integração e verificação final": [
+      {
+        "executionId": "609d93c6-6ca3-4c16-9dc1-b35b9dc4b0bd",
+        "chatSessionId": "sess_d13f1e6d-c966-4618-be56-84d47fe1b3a3",
+        "timestamp": 1792002944778
+      }
+    ]
+  }
+}

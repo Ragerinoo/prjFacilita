@@ -1,0 +1,25 @@
+{
+  "algoritmo": "sha256",
+  "arquivos": {
+    "img/LOV.png": "0e493fba2a87d64d4383c3acf8e3f75bb9bbfa84c4120f8e67879ad80e965a8e",
+    "img/Luna.png": "8a5eb7286cee3124988116482aa67b7139c86af5ebc237958a1502d50230a208",
+    "img/Modo.png": "b1b8a0f8d8cfa5248ae33158ca3eef4e31a1b25377fc2ccf34c7421c250dccc1",
+    "img/Passione.png": "c98a60430baecf1dade9959f19d3f3c1fa0c60a1e74b1389a8f31af92c8b1021",
+    "img/TOUCH.png": "8550a7b47e76e9a69c59c26aeed74bb009124feff1533a8757351b10464a0746",
+    "material/Autoatendimentoqrcode_drive.google.com.png": "9ce595b0eece7f94e9829e3dd62006a76362199b757d4e0cb98b0bbe7a1abc30",
+    "material/Mapa_da_Jornada_de_Atendimento (1).pdf": "d188d70d7485df0c21fa3afee04b8d87415240a3d51c41743133f8395d218113",
+    "material/autoatendimento.html": "84893b9f9f6b7d8eedcc11c2f506be0ba98d5f1e00e23337946ef93d31936bfb",
+    "material/guias/lov.pdf": "b46993f8685efa43a4097aa42622828a87c6ee9c00b61d7359fd7cab2cf33127",
+    "material/guias/lov.txt": "f17b8456dfb769f4e96694f2fc00db662554245df26558078448f3c6ff2f36cf",
+    "material/guias/luna.pdf": "5f83c554c927c224a0455ff96c071583e39bace01c2a9bdca5e0853e0144830d",
+    "material/guias/luna.txt": "1a2bf46dbbb7a63af25ce8a3bf308ccf0c1c9c0356c903c395c6049d4af60873",
+    "material/guias/modo.pdf": "00e6ac7dee94b1e1cc3215ba12ac7c170ea1453981d8133b7119b3e10c93059f",
+    "material/guias/modo.txt": "ccb21bac7fa0061d79508626e86f8a9518cfbbf021ef57966fb5c6bbe60fd5c2",
+    "material/guias/passione.pdf": "45c56141b5f2056d78db46d5f06ea1c88a1e6d15b4eba843761ea1ce629d7ccf",
+    "material/guias/passione.txt": "0004889fc3cd0525927902c32053bb85c160448bab7cb5445dd0a4bbbd3d0960",
+    "material/guias/touch.pdf": "af9dd41254cc66a8a17181640b38b351f191d5fcec4f0767d3ad76a85a8f2b6e",
+    "material/guias/touch.txt": "e4a20700cc2152acb46f45ad64f84ecbc5f665f50cdd23c14453ef696921c3c6",
+    "material/mapa.txt": "22bebc4fec719cbe0e026564ec9ee93a2809b37ed15c68b716867ee9f83091dc",
+    "modelos3d/c0adab67d5fc6db5e82670d1271e4559.glb": "18f73935e0201093763e94f40f4b723b29dbf3f2f4aaad9a9614130d20cdec22"
+  }
+}
