@@ -4,6 +4,8 @@ Canal web único para consumidores de máquinas de café TRES (3corações) reso
 
 > Protótipo de hackathon. O que está pronto, o que roda só em modo local e o que ainda está planejado está descrito em [Status do projeto](#-status-do-projeto).
 
+> **Estado atual:** o projeto **não usa mais AWS nem IA**. Roda local (`scripts/dev_local.py`, repositórios em memória, snapshot em `.dados-demo/`). O assistente deixou de ser ponto de entrada: no lugar entra o formulário **Abrir chamado** (nos "Não listados" e na Jornada dos 13 fluxos). `infra/`, o adaptador DynamoDB e `services/agente/` ficam só como legado/referência. Como o chamado é aberto e como o **risco e a prioridade (P1/P2/P3)** são validados: [`docs/ESTADO_ATUAL.md`](docs/ESTADO_ATUAL.md). As seções abaixo sobre AWS, Bedrock e assistente descrevem o desenho original e estão desatualizadas nesse ponto.
+
 ## 📑 Sumário
 
 - [Proposta do desafio](#-proposta-do-desafio)
@@ -296,6 +298,7 @@ Versões extraídas de `apps/web/package.json` e dos `pyproject.toml` de cada m�
 ├── scripts/                 # Carga do seed, usuários do CS, QR codes, deploy e servidor local de demo
 ├── seed/                    # Catálogo, 13 problemas, instruções, mapa do seletor, manuais e mídia de exemplo
 ├── docs/
+│   ├── ESTADO_ATUAL.md      # Estado atual, abertura de chamado, risco e prioridade
 │   └── DEMO.md              # Roteiro e instruções da demo local (sem AWS)
 ├── .kiro/specs/             # Especificações: requisitos, design e tarefas de cada feature
 ├── .agents/tasks/           # Relatórios de apoio (ex.: precificação em nuvem)
@@ -547,6 +550,7 @@ Seguem as tarefas abertas da spec principal:
 
 | Documento | Conteúdo |
 |-----------|----------|
+| [`docs/ESTADO_ATUAL.md`](docs/ESTADO_ATUAL.md) | Estado atual (sem AWS/IA), abertura de chamado e validação de risco e prioridade |
 | [`docs/DEMO.md`](docs/DEMO.md) | Roteiro da demo local, persistência, solução de problemas e testes focados |
 | [`seed/README.md`](seed/README.md) | Convenções do seed, manuais e Knowledge Base |
 | `.kiro/specs/tres-autoatendimento/` | Requisitos, design (arquitetura, fluxos, modelo de dados, propriedades) e tarefas do produto |
